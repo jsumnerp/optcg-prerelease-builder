@@ -497,11 +497,11 @@
   "trigger": ""
  },
  "OP17-076": {
-  "name": "X.Drake",
-  "rarity": "C",
-  "traits": "Navy/Drake Pirates/Animal Kingdom Pirates",
-  "effect": "[On Play] DON!! -2: Trash 1 card from your opponent's hand.",
-  "trigger": ""
+  "name": "Wo Ro Ro Ro Ro!! I Think I've Sobered Up!!",
+  "rarity": "R",
+  "traits": "The Four Emperors/Animal Kingdom Pirates",
+  "effect": "[Counter] You may trash 1 card from your hand: Up to 1 of your Leader or Character cards gains +3000 power during this battle.",
+  "trigger": "[Trigger] [DON!!-1]: Draw 2 cards."
  },
  "OP17-JACK": {
   "name": "Jack",
@@ -525,7 +525,7 @@
   "trigger": ""
  },
  "OP17-WORORORO": {
-  "name": "Wo Ro Ro Ro Ro!! I Think I\u2019ve Sobered Up!!",
+  "name": "Wo Ro Ro Ro Ro!! I Think I’ve Sobered Up!!",
   "rarity": "C",
   "traits": "The Four Emperors/Animal Kingdom Pirates",
   "effect": "[Counter] You may trash 1 card from your hand: Up to 1 of your Leader or Character cards gains +3000 power during this battle.",
@@ -588,10 +588,10 @@
   "trigger": ""
  },
  "OP17-085": {
-  "name": "Nami",
-  "rarity": "C",
-  "traits": "Elbaph/Straw Hat Crew",
-  "effect": "[On Play] You may trash 1 {Elbaph} type card from your hand: Draw 2 cards.",
+  "name": "Dorry",
+  "rarity": "UC",
+  "traits": "Giant/Elbaph/Giant Warrior Pirates",
+  "effect": "This Character gains +12 cost. [On Play] If your Leader has the {Elbaph} type, play up to 1 [Brogy] with a cost of 5 or less from your hand or trash. Then, you cannot play Character cards during this turn.",
   "trigger": ""
  },
  "OP17-0XX": {
@@ -935,6 +935,97 @@
   "rarity": "C",
   "traits": "Luffy and Loki",
   "effect": "",
+  "trigger": ""
+ },
+ "OP17-009": {
+  "name": "Haruta",
+  "rarity": "C",
+  "traits": "Whitebeard Pirates",
+  "effect": "[Opponent's Turn] This Character gains +3000 power. [On Play] K.O. up to 1 of your opponent's Characters with 2000 base power or less.",
+  "trigger": ""
+ },
+ "OP17-016": {
+  "name": "Rakuyo",
+  "rarity": "C",
+  "traits": "Whitebeard Pirates",
+  "effect": "[On Play] K.O. up to 2 of your opponent's Characters with 2000 base power or less.",
+  "trigger": ""
+ },
+ "OP17-018": {
+  "name": "Gurararararara!",
+  "rarity": "C",
+  "traits": "The Four Emperors/Whitebeard Pirates",
+  "effect": "[Counter] Up to 1 of your Leader or Character cards with a type including \"Whitebeard Pirates\" gains +2000 power during this battle. Then, give up to 1 of your opponent's Leader or Character cards -2000 power during this turn.",
+  "trigger": ""
+ },
+ "OP17-068": {
+  "name": "Sasaki",
+  "rarity": "C",
+  "traits": "Animal Kingdom Pirates",
+  "effect": "[When Attacking] You may trash 2 cards from your hand: If your Leader has the {Animal Kingdom Pirates} type, add up to 2 DON!! cards from your DON!! deck and rest them.",
+  "trigger": ""
+ },
+ "OP17-069": {
+  "name": "Jack",
+  "rarity": "C",
+  "traits": "Fish-Man/Animal Kingdom Pirates",
+  "effect": "[Rush: Character] [On Play] [DON!!-1]: If your Leader has the {Animal Kingdom Pirates} type, give up to 1 of your opponent's Characters -2000 power during this turn.",
+  "trigger": ""
+ },
+ "OP17-073": {
+  "name": "Basil Hawkins",
+  "rarity": "C",
+  "traits": "Animal Kingdom Pirates/Hawkins Pirates",
+  "effect": "[On Play] You may trash 1 card from your hand: If your Leader has the {Animal Kingdom Pirates} type, add up to 1 DON!! card from your DON!! deck and set it as active.",
+  "trigger": ""
+ },
+ "OP17-075": {
+  "name": "X.Drake",
+  "rarity": "C",
+  "traits": "Navy/Drake Pirates/Animal Kingdom Pirates",
+  "effect": "[On Play] DON!! -2: Trash 1 card from your opponent's hand.",
+  "trigger": ""
+ },
+ "OP17-086": {
+  "name": "Nami",
+  "rarity": "C",
+  "traits": "Elbaph/Straw Hat Crew",
+  "effect": "[On Play] You may trash 1 {Elbaph} type card from your hand: Draw 2 cards.",
+  "trigger": ""
+ },
+ "OP17-102": {
+  "name": "Charlotte Oven",
+  "rarity": "C",
+  "traits": "Big Mom Pirates",
+  "effect": "[On K.O.] Play up to 1 Character card with 4000 power or less other than [Charlotte Oven] from your trash.",
+  "trigger": "[Trigger] Play this card."
+ },
+ "OP17-107": {
+  "name": "Charlotte Daifuku",
+  "rarity": "C",
+  "traits": "Big Mom Pirates",
+  "effect": "",
+  "trigger": "[Trigger] Play this card."
+ },
+ "OP17-110": {
+  "name": "Charlotte Perospero",
+  "rarity": "C",
+  "traits": "Big Mom Pirates",
+  "effect": "[Your Turn] [On Play] Play up to 1 {Big Mom Pirates} type Character card with a cost of 6 or less from your hand. Then, this Character gains [Rush].",
+  "trigger": "[Trigger] Play this card."
+ },
+ "OP17-111": {
+  "name": "Charlotte Mont-d'or",
+  "rarity": "C",
+  "traits": "Big Mom Pirates",
+  "effect": "[On Play] You may reveal 2 cards with a [Trigger] from your hand: K.O. up to 2 of your opponent's Characters with a cost of 1 or less.",
+  "trigger": "[Trigger] Play this card."
+ },
+ "OP17-115": {
+  "name": "There's Still A Code Of Honour? You Clowns!",
+  "rarity": "C",
+  "traits": "The Four Emperors/Big Mom Pirates",
+  "effect": "[Main] Your [Charlotte Linlin] Leader gains [Unblockable] during this turn. [Counter] Up to 1 of your [Charlotte Linlin] gains +4000 power during this battle.",
   "trigger": ""
  }
 }

@@ -107,9 +107,10 @@ sources, and you should know which field came from where:
 |---|---|---|
 | rating, commentary | your `OP17 Prerelease Guide.xlsx` | authoritative |
 | rarity | same spreadsheet | authoritative |
-| name, types, effect text | card-preview site scrape | high |
-| **cost, power, counter, colour, category** | **read off prerelease card scans by eye** | **see below** |
+| name, types, effect text | English card scans (cardkaizoku, 119/119 revealed) | high |
+| **cost, power, counter, colour, category** | **read off card scans by eye, then verified** | **see below** |
 | SP reprint stats (`EB04-007`, `ST32-002`, …) | Bandai's own card list | authoritative |
+| card art | English scans, 600×838 | — |
 
 ### How the scan-read stats were checked
 
@@ -126,11 +127,18 @@ cost cross-check vs guide notes: 52 agree, 0 disagree, 67 notes make no cost cla
 / 10 SR / 2 SEC / 6 L) also matches OP16's exactly, as you'd expect from a set
 built to the same skeleton.
 
-**What is still soft:** counter values are the weakest field — they're printed
-sideways on the card edge and several source scans are angled phone photos.
-`OP17-085` (Dorry) had no usable scan at all; its 5c/5000 is inferred from the
-guide's note and it ships with a placeholder image. Everything is in
-`data/op17_stats.tsv`, one line per card — correct anything you spot and re-run
+**Counter values were then verified independently.** They're the weakest field
+— printed sideways on the card edge — so every one of the 119 was re-read off
+the clean English scans and compared to the table: **119/119 correct, zero
+errors**. Dorry (`OP17-085`), which originally had no scan at all and whose
+5c/5000/+1000 was inferred purely from the guide's note, came out right.
+
+**What's still missing:** six cards have no effect text, because their spoiler
+photos are too blurred to read at any zoom (`OP17-070`, `OP17-100`) or they are
+genuinely vanilla with an empty text box (`OP17-006`, `OP17-035`, `OP17-051`,
+`OP17-088`). All six are rated 3.0–3.5, and none of them is a blocker, so the
+blocker floor is unaffected. Everything is in `data/op17_stats.tsv` (stats) and
+`data/op17_text.json` (text) — fix anything and re-run
 `python3 scripts/build_op17.py`.
 
 ### When Bandai publishes OP17

@@ -272,10 +272,15 @@
     "Red"
    ],
    "attribute": "",
-   "types": [],
-   "effect": "",
+   "types": [
+    "Whitebeard Pirates"
+   ],
+   "effect": "[Opponent's Turn] This Character gains +3000 power. [On Play] K.O. up to 1 of your opponent's Characters with 2000 base power or less.",
    "trigger": "",
-   "tags": [],
+   "tags": [
+    "on_play",
+    "removal"
+   ],
    "reqTypes": [],
    "reqNames": [],
    "reqLeader": [],
@@ -482,10 +487,15 @@
     "Red"
    ],
    "attribute": "",
-   "types": [],
-   "effect": "",
+   "types": [
+    "Whitebeard Pirates"
+   ],
+   "effect": "[On Play] K.O. up to 2 of your opponent's Characters with 2000 base power or less.",
    "trigger": "",
-   "tags": [],
+   "tags": [
+    "on_play",
+    "removal"
+   ],
    "reqTypes": [],
    "reqNames": [],
    "reqLeader": [],
@@ -533,18 +543,28 @@
    "life": null,
    "power": 0,
    "counter": 0,
-   "counterEventPower": 0,
+   "counterEventPower": 2000,
    "colors": [
     "Red"
    ],
    "attribute": "",
-   "types": [],
-   "effect": "",
+   "types": [
+    "The Four Emperors",
+    "Whitebeard Pirates"
+   ],
+   "effect": "[Counter] Up to 1 of your Leader or Character cards with a type including \"Whitebeard Pirates\" gains +2000 power during this battle. Then, give up to 1 of your opponent's Leader or Character cards -2000 power during this turn.",
    "trigger": "",
-   "tags": [],
-   "reqTypes": [],
+   "tags": [
+    "counter_event",
+    "power_down"
+   ],
+   "reqTypes": [
+    "Whitebeard Pirates"
+   ],
    "reqNames": [],
-   "reqLeader": [],
+   "reqLeader": [
+    "Whitebeard Pirates"
+   ],
    "image": "img/OP17-018.jpg"
   },
   {
@@ -2111,13 +2131,21 @@
     "Purple"
    ],
    "attribute": "",
-   "types": [],
-   "effect": "",
+   "types": [
+    "Animal Kingdom Pirates"
+   ],
+   "effect": "[When Attacking] You may trash 2 cards from your hand: If your Leader has the {Animal Kingdom Pirates} type, add up to 2 DON!! cards from your DON!! deck and rest them.",
    "trigger": "",
-   "tags": [],
-   "reqTypes": [],
+   "tags": [
+    "when_attacking"
+   ],
+   "reqTypes": [
+    "Animal Kingdom Pirates"
+   ],
    "reqNames": [],
-   "reqLeader": [],
+   "reqLeader": [
+    "Animal Kingdom Pirates"
+   ],
    "image": "img/OP17-068.jpg"
   },
   {
@@ -2136,13 +2164,23 @@
     "Purple"
    ],
    "attribute": "",
-   "types": [],
-   "effect": "",
+   "types": [
+    "Fish-Man",
+    "Animal Kingdom Pirates"
+   ],
+   "effect": "[Rush: Character] [On Play] [DON!!-1]: If your Leader has the {Animal Kingdom Pirates} type, give up to 1 of your opponent's Characters -2000 power during this turn.",
    "trigger": "",
-   "tags": [],
-   "reqTypes": [],
+   "tags": [
+    "on_play",
+    "power_down"
+   ],
+   "reqTypes": [
+    "Animal Kingdom Pirates"
+   ],
    "reqNames": [],
-   "reqLeader": [],
+   "reqLeader": [
+    "Animal Kingdom Pirates"
+   ],
    "image": "img/OP17-069.jpg"
   },
   {
@@ -2250,13 +2288,22 @@
     "Purple"
    ],
    "attribute": "",
-   "types": [],
-   "effect": "",
+   "types": [
+    "Animal Kingdom Pirates",
+    "Hawkins Pirates"
+   ],
+   "effect": "[On Play] You may trash 1 card from your hand: If your Leader has the {Animal Kingdom Pirates} type, add up to 1 DON!! card from your DON!! deck and set it as active.",
    "trigger": "",
-   "tags": [],
-   "reqTypes": [],
+   "tags": [
+    "on_play"
+   ],
+   "reqTypes": [
+    "Animal Kingdom Pirates"
+   ],
    "reqNames": [],
-   "reqLeader": [],
+   "reqLeader": [
+    "Animal Kingdom Pirates"
+   ],
    "image": "img/OP17-073.jpg"
   },
   {
@@ -2324,22 +2371,29 @@
    "id": "OP17-076",
    "baseId": "OP17-076",
    "parallel": false,
-   "name": "Wo Ro Ro Ro Ro!! I Think I\u2019ve Sobered Up!!",
+   "name": "Wo Ro Ro Ro Ro!! I Think I've Sobered Up!!",
    "rarity": "R",
    "category": "EVENT",
    "cost": 0,
    "life": null,
    "power": 0,
    "counter": 0,
-   "counterEventPower": 0,
+   "counterEventPower": 3000,
    "colors": [
     "Purple"
    ],
    "attribute": "",
-   "types": [],
-   "effect": "",
-   "trigger": "",
-   "tags": [],
+   "types": [
+    "The Four Emperors",
+    "Animal Kingdom Pirates"
+   ],
+   "effect": "[Counter] You may trash 1 card from your hand: Up to 1 of your Leader or Character cards gains +3000 power during this battle.",
+   "trigger": "[Trigger] [DON!!-1]: Draw 2 cards.",
+   "tags": [
+    "trigger",
+    "counter_event",
+    "draw"
+   ],
    "reqTypes": [],
    "reqNames": [],
    "reqLeader": [],
@@ -2608,12 +2662,50 @@
    "id": "OP17-085",
    "baseId": "OP17-085",
    "parallel": false,
-   "name": "Nami",
+   "name": "Dorry",
    "rarity": "UC",
    "category": "CHARACTER",
    "cost": 5,
    "life": null,
    "power": 5000,
+   "counter": 1000,
+   "counterEventPower": 0,
+   "colors": [
+    "Black"
+   ],
+   "attribute": "",
+   "types": [
+    "Giant",
+    "Elbaph",
+    "Giant Warrior Pirates"
+   ],
+   "effect": "This Character gains +12 cost. [On Play] If your Leader has the {Elbaph} type, play up to 1 [Brogy] with a cost of 5 or less from your hand or trash. Then, you cannot play Character cards during this turn.",
+   "trigger": "",
+   "tags": [
+    "on_play"
+   ],
+   "reqTypes": [
+    "Elbaph"
+   ],
+   "reqNames": [
+    "Brogy"
+   ],
+   "reqLeader": [
+    "Brogy",
+    "Elbaph"
+   ],
+   "image": "img/OP17-085.jpg"
+  },
+  {
+   "id": "OP17-086",
+   "baseId": "OP17-086",
+   "parallel": false,
+   "name": "Nami",
+   "rarity": "UC",
+   "category": "CHARACTER",
+   "cost": 1,
+   "life": null,
+   "power": 2000,
    "counter": 1000,
    "counterEventPower": 0,
    "colors": [
@@ -2633,31 +2725,6 @@
    "reqTypes": [
     "Elbaph"
    ],
-   "reqNames": [],
-   "reqLeader": [],
-   "image": "img/OP17-085.jpg"
-  },
-  {
-   "id": "OP17-086",
-   "baseId": "OP17-086",
-   "parallel": false,
-   "name": "Nami",
-   "rarity": "UC",
-   "category": "CHARACTER",
-   "cost": 1,
-   "life": null,
-   "power": 2000,
-   "counter": 1000,
-   "counterEventPower": 0,
-   "colors": [
-    "Black"
-   ],
-   "attribute": "",
-   "types": [],
-   "effect": "",
-   "trigger": "",
-   "tags": [],
-   "reqTypes": [],
    "reqNames": [],
    "reqLeader": [],
    "image": "img/OP17-086.jpg"
@@ -3150,10 +3217,15 @@
     "Yellow"
    ],
    "attribute": "",
-   "types": [],
-   "effect": "",
-   "trigger": "",
-   "tags": [],
+   "types": [
+    "Big Mom Pirates"
+   ],
+   "effect": "[On K.O.] Play up to 1 Character card with 4000 power or less other than [Charlotte Oven] from your trash.",
+   "trigger": "[Trigger] Play this card.",
+   "tags": [
+    "trigger",
+    "on_ko"
+   ],
    "reqTypes": [],
    "reqNames": [],
    "reqLeader": [],
@@ -3305,10 +3377,14 @@
     "Yellow"
    ],
    "attribute": "",
-   "types": [],
+   "types": [
+    "Big Mom Pirates"
+   ],
    "effect": "",
-   "trigger": "",
-   "tags": [],
+   "trigger": "[Trigger] Play this card.",
+   "tags": [
+    "trigger"
+   ],
    "reqTypes": [],
    "reqNames": [],
    "reqLeader": [],
@@ -3393,11 +3469,19 @@
     "Yellow"
    ],
    "attribute": "",
-   "types": [],
-   "effect": "",
-   "trigger": "",
-   "tags": [],
-   "reqTypes": [],
+   "types": [
+    "Big Mom Pirates"
+   ],
+   "effect": "[Your Turn] [On Play] Play up to 1 {Big Mom Pirates} type Character card with a cost of 6 or less from your hand. Then, this Character gains [Rush].",
+   "trigger": "[Trigger] Play this card.",
+   "tags": [
+    "rush",
+    "trigger",
+    "on_play"
+   ],
+   "reqTypes": [
+    "Big Mom Pirates"
+   ],
    "reqNames": [],
    "reqLeader": [],
    "image": "img/OP17-110.jpg"
@@ -3418,10 +3502,16 @@
     "Yellow"
    ],
    "attribute": "",
-   "types": [],
-   "effect": "",
-   "trigger": "",
-   "tags": [],
+   "types": [
+    "Big Mom Pirates"
+   ],
+   "effect": "[On Play] You may reveal 2 cards with a [Trigger] from your hand: K.O. up to 2 of your opponent's Characters with a cost of 1 or less.",
+   "trigger": "[Trigger] Play this card.",
+   "tags": [
+    "trigger",
+    "on_play",
+    "removal"
+   ],
    "reqTypes": [],
    "reqNames": [],
    "reqLeader": [],
@@ -3526,25 +3616,34 @@
    "id": "OP17-115",
    "baseId": "OP17-115",
    "parallel": false,
-   "name": "There's Still A Code of Honour? You Clowns!",
+   "name": "There's Still A Code Of Honour? You Clowns!",
    "rarity": "R",
    "category": "EVENT",
    "cost": 1,
    "life": null,
    "power": 0,
    "counter": 0,
-   "counterEventPower": 0,
+   "counterEventPower": 4000,
    "colors": [
     "Yellow"
    ],
    "attribute": "",
-   "types": [],
-   "effect": "",
+   "types": [
+    "The Four Emperors",
+    "Big Mom Pirates"
+   ],
+   "effect": "[Main] Your [Charlotte Linlin] Leader gains [Unblockable] during this turn. [Counter] Up to 1 of your [Charlotte Linlin] gains +4000 power during this battle.",
    "trigger": "",
-   "tags": [],
+   "tags": [
+    "counter_event"
+   ],
    "reqTypes": [],
-   "reqNames": [],
-   "reqLeader": [],
+   "reqNames": [
+    "Charlotte Linlin"
+   ],
+   "reqLeader": [
+    "Charlotte Linlin"
+   ],
    "image": "img/OP17-115.jpg"
   },
   {
@@ -3686,6 +3785,7 @@
    "life": null,
    "power": 9000,
    "counter": 0,
+   "counterEventPower": 0,
    "colors": [
     "Red"
    ],
@@ -3702,6 +3802,7 @@
    ],
    "reqTypes": [],
    "reqNames": [],
+   "reqLeader": [],
    "image": "img/EB04-007.jpg"
   },
   {
@@ -3715,6 +3816,7 @@
    "life": null,
    "power": 12000,
    "counter": 0,
+   "counterEventPower": 0,
    "colors": [
     "Yellow"
    ],
@@ -3732,6 +3834,7 @@
    ],
    "reqTypes": [],
    "reqNames": [],
+   "reqLeader": [],
    "image": "img/EB04-061.jpg"
   },
   {
@@ -3745,6 +3848,7 @@
    "life": null,
    "power": 8000,
    "counter": 0,
+   "counterEventPower": 0,
    "colors": [
     "Blue"
    ],
@@ -3761,6 +3865,7 @@
     "Navy"
    ],
    "reqNames": [],
+   "reqLeader": [],
    "image": "img/OP12-056.jpg"
   },
   {
@@ -3774,6 +3879,7 @@
    "life": null,
    "power": 12000,
    "counter": 0,
+   "counterEventPower": 0,
    "colors": [
     "Green"
    ],
@@ -3791,6 +3897,7 @@
    ],
    "reqTypes": [],
    "reqNames": [],
+   "reqLeader": [],
    "image": "img/OP13-028.jpg"
   },
   {
@@ -3804,6 +3911,7 @@
    "life": null,
    "power": 6000,
    "counter": 1000,
+   "counterEventPower": 0,
    "colors": [
     "Yellow"
    ],
@@ -3820,6 +3928,7 @@
    ],
    "reqTypes": [],
    "reqNames": [],
+   "reqLeader": [],
    "image": "img/OP14-108.jpg"
   },
   {
@@ -3833,6 +3942,7 @@
    "life": null,
    "power": 5000,
    "counter": 1000,
+   "counterEventPower": 0,
    "colors": [
     "Black"
    ],
@@ -3849,6 +3959,7 @@
    ],
    "reqTypes": [],
    "reqNames": [],
+   "reqLeader": [],
    "image": "img/OP16-098.jpg"
   },
   {
@@ -3862,6 +3973,7 @@
    "life": null,
    "power": 10000,
    "counter": 0,
+   "counterEventPower": 0,
    "colors": [
     "Purple"
    ],
@@ -3877,6 +3989,7 @@
    ],
    "reqTypes": [],
    "reqNames": [],
+   "reqLeader": [],
    "image": "img/P-107.jpg"
   },
   {
@@ -3890,6 +4003,7 @@
    "life": null,
    "power": 8000,
    "counter": 0,
+   "counterEventPower": 0,
    "colors": [
     "Black"
    ],
@@ -3907,6 +4021,7 @@
    ],
    "reqTypes": [],
    "reqNames": [],
+   "reqLeader": [],
    "image": "img/ST27-005.jpg"
   },
   {
@@ -3920,6 +4035,7 @@
    "life": null,
    "power": 9000,
    "counter": 0,
+   "counterEventPower": 0,
    "colors": [
     "Red"
    ],
@@ -3938,6 +4054,7 @@
     "Straw Hat Crew"
    ],
    "reqNames": [],
+   "reqLeader": [],
    "image": "img/ST31-004.jpg"
   },
   {
@@ -3951,6 +4068,7 @@
    "life": null,
    "power": 6000,
    "counter": 1000,
+   "counterEventPower": 0,
    "colors": [
     "Green"
    ],
@@ -3967,6 +4085,7 @@
    ],
    "reqTypes": [],
    "reqNames": [],
+   "reqLeader": [],
    "image": "img/ST32-002.jpg"
   }
  ]

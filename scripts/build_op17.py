@@ -74,9 +74,9 @@ def cross_check(stats, ratings):
     return agreed, mismatched, silent
 
 
-# The preview site files X. Drake's article under OP17-076, but the code printed
-# on the card is OP17-075 and the rating sheet agrees. Trust the printed code.
-TEXT_ID_FIXES = {"OP17-076": "OP17-075"}
+# Was needed when the preview scrape filed X. Drake's text under OP17-076; both
+# cards now have their own verified text, so there is nothing left to remap.
+TEXT_ID_FIXES = {}
 
 
 def apply_text_fixes(text):

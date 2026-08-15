@@ -11,6 +11,7 @@
    "life": null,
    "power": 9000,
    "counter": 0,
+   "counterEventPower": 0,
    "colors": [
     "Red"
    ],
@@ -27,6 +28,7 @@
    ],
    "reqTypes": [],
    "reqNames": [],
+   "reqLeader": [],
    "image": "img/EB04-007.png"
   },
   {
@@ -40,6 +42,7 @@
    "life": null,
    "power": 12000,
    "counter": 0,
+   "counterEventPower": 0,
    "colors": [
     "Yellow"
    ],
@@ -57,6 +60,7 @@
    ],
    "reqTypes": [],
    "reqNames": [],
+   "reqLeader": [],
    "image": "img/EB04-061.png"
   },
   {
@@ -70,6 +74,7 @@
    "life": null,
    "power": 8000,
    "counter": 0,
+   "counterEventPower": 0,
    "colors": [
     "Blue"
    ],
@@ -86,6 +91,7 @@
     "Navy"
    ],
    "reqNames": [],
+   "reqLeader": [],
    "image": "img/OP12-056.png"
   },
   {
@@ -99,6 +105,7 @@
    "life": null,
    "power": 12000,
    "counter": 0,
+   "counterEventPower": 0,
    "colors": [
     "Green"
    ],
@@ -116,6 +123,7 @@
    ],
    "reqTypes": [],
    "reqNames": [],
+   "reqLeader": [],
    "image": "img/OP13-028.png"
   },
   {
@@ -129,6 +137,7 @@
    "life": null,
    "power": 6000,
    "counter": 1000,
+   "counterEventPower": 0,
    "colors": [
     "Yellow"
    ],
@@ -145,6 +154,7 @@
    ],
    "reqTypes": [],
    "reqNames": [],
+   "reqLeader": [],
    "image": "img/OP14-108.png"
   },
   {
@@ -158,6 +168,7 @@
    "life": null,
    "power": 5000,
    "counter": 1000,
+   "counterEventPower": 0,
    "colors": [
     "Black"
    ],
@@ -174,6 +185,7 @@
    ],
    "reqTypes": [],
    "reqNames": [],
+   "reqLeader": [],
    "image": "img/OP16-098.png"
   },
   {
@@ -187,6 +199,7 @@
    "life": null,
    "power": 10000,
    "counter": 0,
+   "counterEventPower": 0,
    "colors": [
     "Purple"
    ],
@@ -202,6 +215,7 @@
    ],
    "reqTypes": [],
    "reqNames": [],
+   "reqLeader": [],
    "image": "img/P-107.png"
   },
   {
@@ -215,6 +229,7 @@
    "life": null,
    "power": 8000,
    "counter": 0,
+   "counterEventPower": 0,
    "colors": [
     "Black"
    ],
@@ -232,6 +247,7 @@
    ],
    "reqTypes": [],
    "reqNames": [],
+   "reqLeader": [],
    "image": "img/ST27-005.png"
   },
   {
@@ -245,6 +261,7 @@
    "life": null,
    "power": 9000,
    "counter": 0,
+   "counterEventPower": 0,
    "colors": [
     "Red"
    ],
@@ -263,6 +280,7 @@
     "Straw Hat Crew"
    ],
    "reqNames": [],
+   "reqLeader": [],
    "image": "img/ST31-004.png"
   },
   {
@@ -276,6 +294,7 @@
    "life": null,
    "power": 6000,
    "counter": 1000,
+   "counterEventPower": 0,
    "colors": [
     "Green"
    ],
@@ -292,6 +311,7 @@
    ],
    "reqTypes": [],
    "reqNames": [],
+   "reqLeader": [],
    "image": "img/ST32-002.png"
   }
  ]
