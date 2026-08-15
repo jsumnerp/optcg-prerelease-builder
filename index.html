@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OPTCG Sealed Deck Solver</title>
+<meta name="theme-color" content="#0e1116">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Sealed">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="icon" href="icons/favicon-32.png" sizes="32x32">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="bar">
+  <h1>OPTCG <span>Sealed Solver</span></h1>
+  <div class="controls">
+    <label>Set
+      <select id="setSelect"></select>
+    </label>
+    <label>Packs
+      <input id="packCount" type="number" min="1" max="24" value="6">
+    </label>
+    <label>Seed
+      <input id="seed" type="number" value="1">
+    </label>
+    <button id="btnSim" class="primary">Open packs &amp; build deck</button>
+    <button id="btnReroll">Reroll seed</button>
+    <button id="btnBatch">Run 100 sims</button>
+  </div>
+</header>
+
+<div id="status" class="status"></div>
+
+<nav class="tabs">
+  <button data-tab="deck" class="active">Deck</button>
+  <button data-tab="pool">Pool</button>
+  <button data-tab="cuts">Cuts</button>
+  <button data-tab="batch">Batch stats</button>
+  <button data-tab="quick">Quick add</button>
+  <button data-tab="paste">Paste</button>
+</nav>
+
+<main>
+  <section id="tab-deck" class="tab active">
+    <div id="deckSummary"></div>
+    <div id="deckExport" class="export" hidden>
+      <div class="export-row">
+        <button data-act="copy" class="primary">Copy deck for Card Kaizoku</button>
+        <button data-act="download">Download .txt</button>
+        <button id="btnToggleSim">Show list</button>
+        <span id="exportMsg"></span>
+      </div>
+      <textarea id="simText" rows="10" spellcheck="false" readonly hidden></textarea>
+    </div>
+    <div id="deckBody" class="empty">Hit <b>Open packs &amp; build deck</b> to run a sealed simulation.</div>
+  </section>
+
+  <section id="tab-pool" class="tab">
+    <div id="poolBody" class="empty">No pool yet.</div>
+  </section>
+
+  <section id="tab-cuts" class="tab">
+    <div id="cutsExport" class="export" hidden>
+      <div class="export-row">
+        <button data-act="copy" class="primary">Copy cuts for Card Kaizoku</button>
+        <button data-act="download">Download .txt</button>
+        <button id="btnToggleCutsSim">Show list</button>
+        <span id="cutsExportMsg"></span>
+      </div>
+      <textarea id="cutsSimText" rows="10" spellcheck="false" readonly hidden></textarea>
+    </div>
+    <div id="cutsBody" class="empty">No deck yet.</div>
+  </section>
+
+  <section id="tab-batch" class="tab">
+    <div id="batchBody" class="empty">Run a batch to see how often the solver hits its targets across many pools.</div>
+  </section>
+
+  <section id="tab-quick" class="tab">
+    <p class="hint">
+      Tap a card to add one. The <b>1–5</b> buttons set the count outright, <b>×</b> clears it.
+      Built for entering a real pool on a phone at the event.
+    </p>
+    <div class="qa-controls">
+      <input id="qaSearch" type="search" placeholder="Search name or code…" autocomplete="off">
+      <div id="qaColors" class="qa-colors"></div>
+    </div>
+    <div id="qaGrid" class="qa-grid"></div>
+    <div class="qa-bar">
+      <span id="qaCount">0 cards</span>
+      <button id="qaClear">Clear all</button>
+      <button id="qaBuild" class="primary">Build deck</button>
+    </div>
+  </section>
+
+  <section id="tab-paste" class="tab">
+    <p class="hint">
+      One card per line. Accepts <code>OP17-024</code>, <code>OP17-024 x3</code>,
+      <code>3x OP17-024</code>, or <code>3 OP17-024</code>. Unknown codes are reported, not silently dropped.
+    </p>
+    <textarea id="pasteBox" rows="14" spellcheck="false" placeholder="OP17-002 x2&#10;OP17-024&#10;OP17-031 x4"></textarea>
+    <div class="paste-actions">
+      <button id="btnPaste" class="primary">Build deck from this pool</button>
+      <span id="pasteMsg"></span>
+    </div>
+  </section>
+</main>
+
+<script>
+  // Service workers need a secure origin: https, or localhost. Over plain http
+  // on a LAN address the registration simply won't happen and the app still
+  // works online -- it just can't be installed or used offline.
+  if ('serviceWorker' in navigator) {
+    addEventListener('load', () => navigator.serviceWorker.register('sw.js').catch(() => {}));
+  }
+</script>
+<script src="config.js"></script>
+<script src="solver.js"></script>
+<script src="packs.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

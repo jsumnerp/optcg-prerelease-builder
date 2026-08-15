@@ -1,0 +1,785 @@
+{
+ "set": "OP17",
+ "ratings": {
+  "OP17-001": {
+   "name": "Edward Newgate",
+   "rarity": "L",
+   "rating": null,
+   "note": "N/A"
+  },
+  "OP17-002": {
+   "name": "Atmos",
+   "rarity": "C",
+   "rating": 4.0,
+   "note": "A vanilla 4c would have 1k counter. In exchange for the missing counter, Atmos gets to be a 9k power character on your opponent's turn. That usually means your opponent will be taking 6k swings every turn after you play Atmos with no fears of being K.O.'d by normal combat until late game. There are effects in this set that minus character power or remove characters, but being effectively immune early game to normal combat is a huge plus that more than makes up for his lack of counter."
+  },
+  "OP17-003": {
+   "name": "Izo",
+   "rarity": "R",
+   "rating": 4.5,
+   "note": "A vanilla 4c would have 1k counter. Izo gains two effects that more than make up for the missing counter. The first is Rush:Character, a really powerful keyword that Bandai keeps undervaluing, and the second is getting to -6k something On Play. These two in tandem allow Izo to make use of Character Rush, swinging at the target he weakens, and -6k means Izo can probably kill anything 10k or less power without don investment, with don investment Izo is basically a secure kill on anything rested. The only reason I can't bring myself to rank Izo 5 stars is the lack of counter and the fact that I would never play Izo until my opponent has a rested character, so Izo is more like removal than a character you play to threaten. I normally love curving out, but Izo is so strong I would avoid playing him on 4 don even if it means not using your don for any board development that turn. Probably the wrong choice, but it's the choice I might make if I'm greedy"
+  },
+  "OP17-004": {
+   "name": "Inuarashi & Nekomamushi",
+   "rarity": "C",
+   "rating": 2.0,
+   "note": "All 2k counters start at 2 stars and can be upgraded based on what they offer. This On Play is not going to be relevant enough for me to increase this card's score at all. You will not often find a situation where you need to play a 7 cost or less Land of Wano or Whitebeard character and need to give it rush that turn at the cost of a 2k counter in your hand and 3 more don. While the opportunity will come up a decent amount of the time during prerelease, it will not be the correct play most of the time and you should just keep the counter in hand and use the don for something else. Maybe I should give it a .5 star buff for niche scenarios where it's good but I'm not going to."
+  },
+  "OP17-005": {
+   "name": "Edward Newgate",
+   "rarity": "SR",
+   "rating": 4.0,
+   "note": "A vanilla 10c would have 1k counter. In exchange for the missing 1k, Newgate gets 2 effects. Unfortunately, while Rainbow Luffy is everything: every color, every type, and every name, the one thing he is not is a single-colored leader, so Newgate's On Play does not work. If his On Play did work, Newgate would be 5 stars. The functioning upside is in his second effect, costing less if your opponent has a 10k body. A lot of characters (15 by my count) meet these conditions, meaning an average deck will have a body big enough for you to get the discount. What\u2019s good about Newgate is that if your opponent has a big body in play, you get his -4c discount making it easier for you to catch up, but if they don\u2019t have one, you get to set the tempo and play the first big body. 4 less don is a very significant discount as wel, allowing you to develop another body, play a blocker or two, and/or use the don to swing/event counter."
+  },
+  "OP17-006": {
+   "name": "Kingdew",
+   "rarity": "C",
+   "rating": 3.0,
+   "note": "Vanilla 2k counter"
+  },
+  "OP17-007": {
+   "name": "Kouzuki Oden",
+   "rarity": "R",
+   "rating": 3.0,
+   "note": "A vanilla 7c would have 9k power and 1k counter. For 1k less power and missing counter, Oden gets an effect that lets you play another 6k or less character type locked to Land of Wano or Whitebeard Pirates. I think with only a few targets to play with his On Play he'd be 2 stars, with enough decent targets he goes up to 4 stars, which is why I averaged the two scenarios for his grade."
+  },
+  "OP17-008": {
+   "name": "Jozu",
+   "rarity": "R",
+   "rating": 5.0,
+   "note": "Jozu is a contender for best Rare in the set. A vanilla 6c would have 1k counter. In exchange for missing counter, Jozu has an incredible on Play that turns your leader to an 8k for your turn and your opponent's next. Any increasing leader attack effect is good, and going up to 8k is a lot higher than effects we've seen in the past with 6k or 7k being the norm. You can play this early, using your leader to jockey for board and giving you a turn with low aggression from your opponent. But playing this late game to survive another turn will sometimes be better than healing or playing out blockers, effectively giving you 3k counter for free for each of your opponent's characters and leader."
+  },
+  "OP17-009": {
+   "name": "Haruta",
+   "rarity": "UC",
+   "rating": 4.5,
+   "note": "A vanilla 4c would have 6k power. Haruta is missing 1k power in exchange for two effects. The first is a 3k power buff on your opponent's turn. This lets Haruta defend for a lot more than he hits for, allowing you to swing 5k and defend 8k on your opponent's turn. Your opponent probably won't be able to deal with him early, and even if they're able to or swing at him later when they develop a big enough body or invest enough don, they're only getting rid of a 5k attacker so it might not even be worth it for them. His second effect is an On Play that K.O.s a 2k power or less character, letting you pop a chump blocker or weak threat. You might even get lucky enough to use his On Play at 4 don if your opponent plays a target early game. There is also power minus in this set, so there's a chance you can combo him with another effect to really blow out your opponent."
+  },
+  "OP17-010": {
+   "name": "Fossa",
+   "rarity": "C",
+   "rating": 2.0,
+   "note": "Fossa is a sometimes-blocker, otherwise he's a 1c 3k power 0 counter character. He is a blocker when your opponent has a 10k character (15 in the set by my count), and when your opponent does meet these conditions he also gets +2k power. A 5k blocker for 1 don is a great rate, but it is only that rate late game after your opponent has a big body. Due to lack of counter, this card will be a dead card you'll have to play at some point. You can play it early, but then it will be vulnerable to removal throughout the game. Probably better to wait until your opponent plays a body that meets Fossa's activation requirements. Overall not a great card."
+  },
+  "OP17-011": {
+   "name": "Blamenco",
+   "rarity": "C",
+   "rating": 4.0,
+   "note": "A vanilla 5c would have 7k power. Blamenco is missing 1k power in exchange for a DON!! x2 When Attacking effect that -4k power on one of your opponent's character for the turn. That is 4 don of value minimum when you get his effect off on a rested character, usually resulting in a kill if you invest more swings or more don into the weakened character. I would never swing with him unless I get value off of his effect. I'd leave him standing to ward off any aggression that might come from your opponent. They'll be less inclined to swing with you having him standing on your board."
+  },
+  "OP17-012": {
+   "name": "Blenheim",
+   "rarity": "C",
+   "rating": 3.0,
+   "note": "All chump blockers I rate 3 stars base and upgrade them based on their effects. Blenheim\u2019s on K.O. allows him to play a 1c Whitebeard Pirate character from your hand. There are two targets for that effect this set: Fossa and Whitey Bay. Fossa is a 2 star card, Whitey Bay is a 4 star card. If you decide to run all your copies of both, you can get cheeky with Blenheim's On K.O. and maybe play Fossa as a blocker from your hand or play Whitey Bay to pop your opponent's weak threat or blocker, but at the end of the day you're only getting 1 don worth of value and that\u2019s not enough upside for me to give Blenheim a bump in rating, not even a .5 bump."
+  },
+  "OP17-013": {
+   "name": "Portgas.D.Ace",
+   "rarity": "UC",
+   "rating": 4.5,
+   "note": "A vanilla 6c would have 8k power. In exchange for 2k missing power, Ace gets two effects that make him worth it. Firstly, he can lower his cost by 2 if there's a 10k power character on your opponent's board. In that scenario, he's an on rate 4c character, counter included. There's a lot of 10ks running around, 15 by my count. His second effect is an On Play that -6k to a rested character for your turn, which should result in a kill on your opponent's rested character with your board swings and leader swing. The reason why I couldn't give him the full 5 stars is because there will be situations where he won't get his discount and therefore you won't have enough don to guarantee the kill. But at the end of the day Ace is a 1k counter so his opportunity cost is low while his upside is very high."
+  },
+  "OP17-014": {
+   "name": "Whitey Bay",
+   "rarity": "C",
+   "rating": 4.0,
+   "note": "Whitey goes into the rare 1k counter card with utility category, and her utilty is quite good. You really want to get her On Play effect off, popping a blocker or weak threat. There is also power minus in this set, so there's a chance you can combo her with another effect to really blow out your opponent. Her second effect means that playing her doesn't even lose you the counter she would offer in your hand (for your lead at least) since she trashes herself to +1k to your lead for the battle. Even if you never get the chance to pop anything with her On Play, the opportunity cost is low since she'll be a 1k counter in hand still."
+  },
+  "OP17-015": {
+   "name": "Marco",
+   "rarity": "UC",
+   "rating": 3.0,
+   "note": "A vanilla 5c would have 7k power. Marco gains two effects for 1k power less. The first is a protection effect that allows you to K.O. Marco instead of allowing one of your characters to be removed. His second combos with that, allowing you to trash Whitebeard Pirates from your hand to Play this card whenever he gets K.O.'ed. Do keep in mind you can also use his On K.O. effect for when he dies via swings as well. I normally wouldn't rank K.O. protection too high, but due to the amount of removal in this set, I am giving him the full 1 star bump. In a normal set, maybe I'd rate him 2.5, but due to the context, I'm fine ranking him a bit higher."
+  },
+  "OP17-016": {
+   "name": "Rakuyo",
+   "rarity": "UC",
+   "rating": 4.0,
+   "note": "2k counters get 2 stars base from me and are upgraded based on what they offer. Rakuyo has an incredible utility On Play: popping up to two 2k power characters. Popping 2 chump blockers or a chump blocker and weak body will feel really unfair. There is also power minus in this set, so there's a chance you can combo him with another effect to really blow out your opponent. Unfortunately, power removal is a lot worse than cost removal, and the body stapled to this removal isn't very good at all, so 4 stars is where I'm comfortable rating him."
+  },
+  "OP17-017": {
+   "name": "HAS THE POWER TO DESTROY THE WORLD!!",
+   "rarity": "UC",
+   "rating": 2.0,
+   "note": "While I love counters that can counter for both your leader and character (normally giving them 3 stars), this card's activation requirement is too steep. There are 15 8k power characters by my count in this set from all rarities (They need to be 8k exactly, can't be over). That is not enough to consistently rely on this being active. This card has a Main ability to K.O. your opponent's stage, but that's not very good in this format with only 1 stage that people might not even run. I really want to rate this 1.5 stars, but there will be scenarios where your deck has a bunch of 8ks. So 2 stars is where I'll have to leave it."
+  },
+  "OP17-018": {
+   "name": "Gurararararara!",
+   "rarity": "C",
+   "rating": 4.0,
+   "note": "1 don for +2k for a whitebeard leader or character and -2k to your opponent\u2019s leader or character for the turn is a really good rate for 1 don. I normally give counters that can counter for both leader and characters 3 stars, and while this can only counter whitebeard pirates, there are enough of them this set for me to start it close to that grade. You can also always do the -2k for an attack directed at a non-whitebeard character, giving your lead the +2k (wasting it). The fact that this can counter their first swing and minus their next attack is really good, so 4 stars might seem like a bit much for just a counter effect but that\u2019s where I\u2019ll rate it."
+  },
+  "OP17-019": {
+   "name": "I Don't Have Time to Chat with Snot-Nosed Brats",
+   "rarity": "R",
+   "rating": 2.0,
+   "note": "Searcher characters I give a baseline 2 star grade to uncapped ceiling depending on how many targets you have. However, event searchers get a lower starting point than character searchers since if the character searcher whiffs, you still have a body (albeit a bad one) for your troubles. You have no such failsafe with an event searcher. However, this event has a trigger, giving your leader +1k for a turn, which will come up and save you in some situations. I am going to give this card the same 2 star base grade and uncapped ceiling grade I give searcher characters due to the trigger being relevant enough. With searcher cards, I normally give all targets a .5 bump to incentivize me to run more targets if I'm running the searcher themselves."
+  },
+  "OP17-020": {
+   "name": "Shanks",
+   "rarity": "L",
+   "rating": null,
+   "note": "N/A"
+  },
+  "OP17-021": {
+   "name": "Crone Oli",
+   "rarity": "UC",
+   "rating": 2.5,
+   "note": "All 2k counters get 2 stars base and get more points for the utilty they offer. Crone's protection effect only protects Red-Haired Pirates, so the protection effect is not going to be relevant most of the time. Maybe if you see a hand full of your Red-Haired Pirates in your opening hand, playing Crone out early is the right play. While most of the time you can plan on resting Crone themself to activate her ability, you'd be leaving them vulerable to a cool breeze. If you want Crone to continue to protect, you can leave up one don each turn to rest or plan to rest the character you play out each turn. Leaving up the don to rest will keep you off curve especially if you end up not using the effect. Due to the amount of removal in this set, I'm fine giving Crone a slight bump in rating, even though there are only 13 Red-Haired Pirates in this set at all rarities on my count."
+  },
+  "OP17-022": {
+   "name": "Shanks",
+   "rarity": "SR",
+   "rating": 5.0,
+   "note": "Despite steep competition, Shanks is the best SR in the set and is in contention for the best card in the whole set overall. A vanilla 10c would have 1k counter. Shanks is missing counter in exchange for two good effects. The two effects are Rush and resting your opponent's board On Play and refunding 2 don. The rush combos very well with his own On Play. Play him while you\u2019re behind, rest your opponent\u2019s board and get some kills. Shanks kills the biggest threat while your board and lead gets rid of the rest, securing kills with the 2 refunded don, damn. Or you use the 2 don Shanks refunds to play a blocker, damn. You can obviously play him while ahead as well. Rest all your opponent\u2019s blockers and do math for lethal, with 2 refunded don and a 12k rush, damn. 5 stars all the way."
+  },
+  "OP17-023": {
+   "name": "Nami",
+   "rarity": "UC",
+   "rating": 2.5,
+   "note": "All 2k counters always get a 2 stars base and get more points for the utilty they offer. Nami has a protection effect for your East Blue and Straw Hats, which I count 15 of at all rarities. If you see an opening hand with a bunch of Straw Hats, maybe playing her is the right play. I'll give her a .5 buff due to the amount of removal in this set. Do keep in mind a cool breeze will kill her after she rests herself to activate her ability."
+  },
+  "OP17-024": {
+   "name": "Howling Gab",
+   "rarity": "C",
+   "rating": 5.0,
+   "note": "A vanilla 8c would have 10k power. For 2k less power Howling Gab gets Banish, which is a good keyword to have on an 8k body, and a good On Play effect to rest a character down. How this will mostly play out is you rest down a blocker, kill it with lead and/or board swings so that next turn Gab gets to make use of his Banish without having to worry about a blocker. I was tempted to give him a 4.5 star rating due to him not being a great body for when you're jockeying rather than racing, and especially when compared to other cards in this set, but I think that his On Play would be good enough even if you're behind and jockeying. You're usually much more happy playing him than you would be with a vanilla, so his grade should reflect that. This being at common concerns me."
+  },
+  "OP17-025": {
+   "name": "Building Snake",
+   "rarity": "UC",
+   "rating": 4.0,
+   "note": "A vanilla 4c would have 6k power. In exchange for 1k less power you get a really good On K.O. effect and a decent Activate:Main. His Activate:Main lets you give a rested don to your lead once per turn, which will make up for his missing power. This in my eyes cancels out his missing power, bringing him back to a 3 star grade. His On K.O. is what pushes his grade higher, allowing you to K.O. a rested character 6c or less. While this effect is very good, and I was tempted to give him a higher grade, it being an On K.O. effect gives your opponent the ability to play around it. I could see a world where your opponent either ignores this or swings at it with leader first so you have no target to pop, so either you counter or let it go for no value. They can also swing 7c or more bodies first into this, which is the same idea. Still, it changes the game enough and is annoying enough that 4 stars is where I'm comfortable putting it at."
+  },
+  "OP17-026": {
+   "name": "Fugar",
+   "rarity": "UC",
+   "rating": 4.0,
+   "note": "All 2k counters get 2 stars base and are upgraded based on how much utilty they offer. Fugar has two effects, his first effect is a When Attacking that allows you to rest down your opponent's characters with 2c or less. This will usually rest down a blocker or another weak body for your other characters or lead to swing at. His second effect is an On K.O. effect that draws you a card. Your opponent is kind of forced to swing at Fugar if they want to play any chump blockers in the future, so he'll replace himself with his On K.O. effect. I could see a world where I play him turn 1 just to make my opponent annoyed that they're going to lose a chump blocker or weak threat at some point or discourage them from playing any at all in the future."
+  },
+  "OP17-027": {
+   "name": "Benn.Beckman",
+   "rarity": "R",
+   "rating": 5.0,
+   "note": "Benn.Beckman is the best Rare in the whole set, and is a contender for best card overall competing with Shanks. A vanilla 7c would normally have 1k counter, but Benn.Beckman more than makes up for that lack of counter. Rush:Character keeps on being underrated by Bandai's card design team, and his On Play replacing himself and giving him something to swing at is insane. Benn.Beckman gets to make use of his Character Rush no matter what, as long as your opponent's board isn't empty, and resting 2 of your opponent's characters on play means he'll give you another target to swing at as well after he takes care of the first."
+  },
+  "OP17-028": {
+   "name": "Bonk Punch & Monster",
+   "rarity": "C",
+   "rating": 5.0,
+   "note": "This is the best common in the set. A 3k blocker would normally cost 2 Don super ideally or 3 Don less ideally, but this On Play effect is a nightmare effect that would be worth 4 don alone. Popping a 3 or 4 cost feels great, but popping a 5 or 6 cost is backbreaking for your opponent. Unlike Building Snake, who has the same effect but On K.O., your opponent cannot play around this unless they know you have it in hand. You get the agency with this effect being On Play vs Building Snake's effect being an On K.O."
+  },
+  "OP17-029": {
+   "name": "Hongo",
+   "rarity": "R",
+   "rating": 5.0,
+   "note": "All 2k counters get 2 stars base and are upgraded based on how much utility they offer. Right off the bat, Hongo has blocker which would give him a 1.5 or 2 star bump. Then he also has an On Play that rests 2 of your opponent's chump blockers or low bodies and restands a don. That On Play would also bumps him 1.5 or 2 stars. Him effectively costing 3 don with his restand don effect helps his grade too, since that refunded don can help you play another body or use the don to push for damage or kills. Him being a 4k also gives you the rare option to swing with him to pressure or get another swing late game if you didn't need to block with him earlier."
+  },
+  "OP17-030": {
+   "name": "Monkey.D.Luffy",
+   "rarity": "C",
+   "rating": 4.0,
+   "note": "A vanilla 4c would have 6k power. In exchange for missing counter, Luffy gets two effects. The first effect is an On Play that would allow you to rest 1 Don to give him rush. The second is an Activate:Main Once Per Turn that allows you to restand a don if you have 5 or less cards in hand. His first effect means you  can effectively play him as a 5c 5k rush, which while not great, is always a nice option to have. Not only that, but in prerelease your hand will most likely be 5 cards or less under normal circumstances whenever you play him, meaning that you can activate his main the turn he comes down and turns afterwards. If you view Luffy as a 4c 5k that restands a don on entry and every subsequent turn, his below average rate doesn't seem so bad, since the refunded don can make up for his missing power. Same thing as a 5c 5k rush that restands a don on entry and every subsequent turn. If you see him in your hand, you can also be aware of how many cards you need to pitch in order to play him and activate his effect. Do keep in mind that if you have 6 cards in hand with him in it, you can play him and you'll go down to 5, allowing you to activate his main. I know most would know, but I've seen people be unaware of this interaction. All of this to say that as a very efficient modal card, I was almost tempted to bump up his score higher. However, at the end of the day 5k bodies are super vulnerable and you'll probably have to hold him back in order to take advantage of his activate main. Even if you can give him Rush I don't see much use for it outside of pushing for game."
+  },
+  "OP17-031": {
+   "name": "Yasopp",
+   "rarity": "SR",
+   "rating": 5.0,
+   "note": "A vanilla 5c would have 7k power. In exchange for 1k less power, Yasopp gets two effects. The first is an on play that replaces replaces himself in hand and rests something with a cost of 8 or less. This can help push for game late game, but playing it early is the most ideal to force counter out of your opponent's hand or get some cheeky kills on blockers with your lead. His second effect is an End of Your Turn effect that restands a Red Haired Pirate. The most common thing you'll do with him is restand himself so he can swing without fear of dying each turn after you initially played him. You can restand other Red Haired Pirates as well, which often either won't come up or is the wrong choice, but it's important to keep in mind."
+  },
+  "OP17-032": {
+   "name": "Limejuice",
+   "rarity": "R",
+   "rating": 3.0,
+   "note": "Bandai is testing out 1c 2k counter searchers, which search top 3 compared to normal searchers looking top 5. While I normally give two halves of the same coin the same grade (vanilla 1ks vs vanilla 2ks), I think ranking 2k searchers a bit higher than their counterparts is fair. 2k counters get 2 stars base from me. Searchers get 2 stars base with uncapped ceiling if you run enough targets. Slap them together you get a 3 star base card with an uncapped ceiling. I do believe you run this even if you have only a couple of targets. Pitching it as a 2k will be the most common thing you do with them, but there will be situations where you check your trash and hand and realize you haven't seen a single Red-Haired pirate all game. That is when you let him rip if you need a play. With searcher cards, I normally give all targets a .5 bump to incentivize me to run more targets if I'm running the searcher themselves."
+  },
+  "OP17-033": {
+   "name": "Lucky.Roux",
+   "rarity": "R",
+   "rating": 4.5,
+   "note": "Lucky.Roux is actually on rate for a 4c searcher, they either have 6k power no counter or 5k power 1k counter. Roux follows the second statline. However, 4c searchers usually look top 5 rather than Roux's top 3. That would make me rank him lower than other 4c searchers, which I give a baseline of 3 stars, but his activate main more than makes up for his lower search range. If you have Roux on field and your opponent tries to go for game, math becomes a nightmare for them since you get to do your best Jewelry Bonney impression and rest their best attacker after their first attack. You can also swing with Roux, since if you opponent pressures him and swings at him, you can activate his effect to rest their next swing, annoying them even more. I was tempted to give him 5 stars, but due to whiffing enough with search and situations where his On Your Opponent's Attack effect not being good enough, I think I'm good with him at 4.5. With searcher cards, I normally give all targets a .5 bump to incentivize me to run more targets if I'm running the searcher themselves."
+  },
+  "OP17-034": {
+   "name": "Rockstar",
+   "rarity": "C",
+   "rating": 2.5,
+   "note": "A vanilla 5c would have 7k power, so he lacks 1k power. In exchange, his activate main lets you become a 6k leader if your opponent's leader is above 5k. His activate main might come up if your opponent plays Jozu, Ganzui, Zoro SP, Roger SP, or Luffy SP which is why I gave him .5 stars back from his -1 star for being off rate. Do be aware, if somehow both you and your opponent have Rockstar out and one of you are able to activate, it\u2019ll be a ping pong match with both players activating Rockstar\u2019s ability on their turn for as long as both stay alive."
+  },
+  "OP17-035": {
+   "name": "Roronoa Zoro",
+   "rarity": "C",
+   "rating": 3.0,
+   "note": "Vanilla 2k counter"
+  },
+  "OP17-036": {
+   "name": "Withdraw Now And Allow Me To Save Face",
+   "rarity": "UC",
+   "rating": 5.0,
+   "note": "This card was a contender for best UC in the set. The Main effect allows you to rest 6 more don to rest a character and pop 2 6c or less rested characters. That is 7 don (the card itself costs 1) to pop up 2 characters, an increidble rate. Even if you don't get a good chance to use the Main somehow, the counter allows you to use this as a 1 don 4k counter for your leader. Though countering for your Shanks character might come up, it's unlikely. With its modality, being able to pop 2 through main or counter, this event is the strongest in the set and the one I've rated highest, 5 stars."
+  },
+  "OP17-037": {
+   "name": "Are You That Afraid of the New Era?",
+   "rarity": "R",
+   "rating": 3.0,
+   "note": "Event counters that can counter for both leader and characters gets 3 stars base for me, but this is a bit off rate. You need to rest another card, usually a don (meaning it will cost 2 don effectively), but I can see a world where you can rest a character you played the previous turn to get the counter off. Because this is a searcher with its main effect, I'll give it a bump in rating due to its modality, leaving it back at 3 stars. With searcher cards, I normally give all targets a .5 bump to incentivize me to run more targets if I'm running the searcher themselves."
+  },
+  "OP17-038": {
+   "name": "I Think He's Seen An Ugly Future",
+   "rarity": "C",
+   "rating": 4.0,
+   "note": "0c trash 3k counters are good in prerelease since it can save you from a bricky hand, and there are a ton of bricks this set. The Main ability will come up as well, allowing you to push for game by resting down a blocker or jockeying for board and killing an annoying character. 3 stars base for being a counter for both your leader and character, 1 extra star for its rest ability, because while it is good, 4 don for a rest effect is a bit costly."
+  },
+  "OP17-039": {
+   "name": "Rocks.D.Xebec",
+   "rarity": "L",
+   "rating": null,
+   "note": "N/A"
+  },
+  "OP17-040": {
+   "name": "Edward.Newgate",
+   "rarity": "R",
+   "rating": 5.0,
+   "note": "A vanilla 6c would normally have 1k counter. Edward.Newgate is missing counter in exchange for two effects. The first one is On Play drawing you a card, replacing itself immediately which would already rank him 4 stars minimum in my rating system. The second is allowing you to turn one of your cards into a 3k counter for lead once a turn on your opponent's turn, or allow your leader to swing 3k more once a turn on your turn. Although you will mostly be pitching bricks, do keep in mind that you can also upgrade your 1k and 2k counters into 3k counters with this ability. Do be aware, with the expensive prizing on the line your opponent might rule shark you if you pitch counter then try to activate Newgate's ability pitching a brick. Slow down, don\u2019t get too excited, and clearly state that you\u2019re using Newgate's ability after your opponent declares an attack. Then pitch your counter."
+  },
+  "OP17-041": {
+   "name": "Wang Zhi",
+   "rarity": "UC",
+   "rating": 4.0,
+   "note": "Big blockers normally get 4 stars base from me, and Wang Zhi is on rate for a big blocker. His On Play effect that might be relevant but has an expensive cost, allowing him to bottom deck all your opponent's 1c characters in exchange for pitching a card. There are 1c characters that your opponents will run, and while bottoming them might feel good, at the cost of one card in your hand I can't see that being worth it. There will be some situations where it is worth it, but I don't see it happening often enough for me to rate him higher than 4 stars."
+  },
+  "OP17-042": {
+   "name": "Kaido",
+   "rarity": "R",
+   "rating": 4.0,
+   "note": "Big blockers normally get 4 stars base from me, and Kaido is on rate for a big blocker. His On Play effect that is quite good but almost impossible to meet its activation requirements. His On Play gets to -3k one of your opponent's characters, but you need to reveal 3 Rocks Pirates from your hand. While I normally would average a card's grade based on their floor and ceiling, which Kaido would be a 4 stars without his On Play 5 stars with his On Play, I am not going to average such grades since the activation is so hard to get off. I do not doubt you'll run into someone who gets it off or yourself will be able to. But it's so unlikely I don't feel the urge to give him any improved grade."
+  },
+  "OP17-043": {
+   "name": "Ganzui",
+   "rarity": "UC",
+   "rating": 3.0,
+   "note": "A vanilla 5c would normally have 1k counter. Ganzui is missing the counter in exchange for two effects. The first effect isn't all that great, protecting himself from removal in exchange for 2 cards in your hand. Your opponent can always target something else if they want to. Even if this is their only target, you'll have to make a painful choice of losing 2 cards from hand if you really want to keep a him. His second effect of On Play turning your leader into a 6k until your opponent's end phase is good enough to bring him back to a normal grade, making up for the lack of counter. Turning into a 6k has been powercrept, but it is still about the rate we'd see for a 5c card."
+  },
+  "OP17-044": {
+   "name": "Captain John",
+   "rarity": "UC",
+   "rating": 3.0,
+   "note": "A vanilla 4c would have 1k counter. John is missing counter in exchange for a super blocker effect if rested and an ability to rest himself and draw 1 pitch 1. The only time we've seen super blocker be really good is on the 8 drop Kidd, since that effectively made your leader an 8k. A 6k having this effect just isn't as impactful. The ability to rest himself to get the effect immediately is nice, and the card selection is good given the amount of bricks in this set. These two effects are enough to make up for his lack of counter, bringing him back to 3 stars, but not enough to make him any higher."
+  },
+  "OP17-045": {
+   "name": "Kyo",
+   "rarity": "UC",
+   "rating": 4.0,
+   "note": "A vanilla 2c would normally have 1k counter. Even though I don't like running 2c vanillas, that's a good starting point to compare Kyo to. In exchange for the missing counter Kyo gets two effects. The first is a protection effect that costs two cards from your hand to protect. This effect isn't a very good rate, since there will be situations where pitching 2 cards in hand is worse than just allowing your character to be removed, but it is good to have the option witht he amount of removal in this set. The effect isn't type locked either, allowing you to protect everything you play. His second effect On Play is what mostly gives Kyo his 4 star grade. A 2c character that replaces themselves and threaten with just 1 don of investment are decent in prerelease, we saw as much last set."
+  },
+  "OP17-046": {
+   "name": "Gloriosa",
+   "rarity": "SR",
+   "rating": 5.0,
+   "note": "A 1k power chump blocker would normally cost 1 or 2 don. I'll say that one without counter usually costs 1 don. For 2 or 3 more don depending on how you look at it, you get an incredible removal effect that bottom decks a 5c or less. You would run that effect itself for 3 or 4 don, so the fact that it's stapled to a chump blocker is even better. With its initial 3 stars for being a chump blocker, I think she does enough to get the full 5 stars."
+  },
+  "OP17-047": {
+   "name": "Shiki",
+   "rarity": "C",
+   "rating": 1.5,
+   "note": "A vanilla 9c would have 11k power and 1k counter. Shiki has 1k less power and is missing counter in exchange for a difficult to trigger End Of Your Turn effect. This effect triggers if you have 2 or less cards in hand, forcing your opponent to bottom deck one of their cards in hand. This seems terrible. If you're at 2 or less cards, using most of your don to play a 9c 10k power character needs to do more than just make your opponent bottom deck their worst card. The logistics of this card is a nightmare as well. You need to start your turn with 2 cards in hand, then draw for the turn, leaving you with 3 in hand, so that after you play Shiki you are back down to 2. The only reason why I didn't rate this card a 1 is because you need big bodies in prerelease. But there are so many better options that you probably won't need to run him."
+  },
+  "OP17-048": {
+   "name": "Shiki",
+   "rarity": "SR",
+   "rating": 4.5,
+   "note": "A vanilla 7c would have 1k counter. Shiki is missing the counter in exchange for Rush:Character and a When Attacking/On Opponent's Attack Once Per Turn effect. Rush:Character is where I give Shiki most of his grade back for missing his counter. It's hard for me to rank how strong his second effect is. He turns your other Rocks Pirates cards into 3k counters vs Characters only once per turn and can weaken your opponent's board when you're swinging at them with Shiki during your turn. If you have no or few other Rocks Pirates, he's a 4 star card. If you have several others, he's 5 stars, which averages my grade for him."
+  },
+  "OP17-049": {
+   "name": "Charlotte Linlin",
+   "rarity": "R",
+   "rating": 5.0,
+   "note": "A vanilla 5c would have 1k counter. Linlin is missing the counter in exchange for two effects. Her first is an On Play that forces your opponent to choose between 2 bad choices. Either they allow you to draw 2 cards or they discard 2 cards themselves. In theory, they will always pick the choice least bad for them, but sometimes that's hard for players to determine and they will sometimes accidentally pick the wrong choice. Even if they pick the right choice, it's massive advantage for you. On top of this insane On Play, she can dig you out of a bricky hand and turn one brick into a 1k counter once a turn. Do be aware, with the expensive prizing on the line your opponent might rule shark you if you pitch counter then try to activate Linlin's ability pitching a brick. Slow down, don\u2019t get too excited, and clearly state that you\u2019re using Linlin's ability after your opponent declares an attack. Then pitch your counter."
+  },
+  "OP17-050": {
+   "name": "Streusen",
+   "rarity": "C",
+   "rating": 3.0,
+   "note": "Streusen might be the best card you can play on your first turn. You can set up your next turn's play, and if you're lucky, the turn afterwards as well. If you don't see a decent play in the top 2 cards of your deck, you can bottom them and pray for an answer in the next card. Of course, you can also play this card if you have one don open late game, since it's useless in hand with no counter. If he had a counter I'd put him at a much higher rating. However, with his lack of counter and the bricks in this set, oftentimes you might be digging for counter with his On Play."
+  },
+  "OP17-051": {
+   "name": "Jinbe",
+   "rarity": "C",
+   "rating": 3.0,
+   "note": "Vanilla 2k counter"
+  },
+  "OP17-052": {
+   "name": "Don Marlon",
+   "rarity": "C",
+   "rating": 3.0,
+   "note": "A vanilla 3c would have 1k counter normally. In exchange for the missing counter you get an On Play effect that lets you grab a 0c Blue event from your trash. There are two blue events in this set that are 0c and they're good enought to run even without Don Marlon in your deck. I'm greedy and would probably not play Marlon until I have a blue 0c event in yard. But the fact you can play him without the value means he is modal. If you have a critical mass of Rocks Pirates events, I'd say he is 4 stars. If you have only a few, I'd say he's 2 stars, which averages my grade."
+  },
+  "OP17-053": {
+   "name": "Barbell",
+   "rarity": "C",
+   "rating": 4.5,
+   "note": "A vanilla 5c would normally have 1k counter. In exchange for a missing counter, Barbell has two effects. The first is an On K.O. effect that will make it so your opponent dreads swinging at this, since they'll lose two cards in hand if you let him go. While some might try to ignore this card, they really can't since at some point enough 7k swings will deal enough damage that Barbell can make use of his second effect, allowing you to pitch a card to give himself +3k for the turn. This is useful when pushing for game or securing a kill on a bigger body, giving you 3 don worth of value for a card in hand."
+  },
+  "OP17-054": {
+   "name": "Miss Buckingham Stussy",
+   "rarity": "R",
+   "rating": 5.0,
+   "note": "A vanilla 3c would have 1k counter normally. In exchange you get a two effects. Her first is getting to charm a 6c or less character. Her second is activate main resting 3 don and her to charm any character. She's good to play early, stifling your opponent's early aggression, or if you're playing her on an empty board, putting the first body out there. You can also not swing with her and wait for an opportunity to use her main after playing her early. She's good to play late as well, allowing you to freeze any cost character and a 6c or less for 6 don, since you can activate her main ability the turn she comes down. Personally, I wouldn't play her without getting at least one of her effects off, but it might be the right choice sometimes."
+  },
+  "OP17-055": {
+   "name": "There's No Authroity in the World That Lasts Forever!!!",
+   "rarity": "R",
+   "rating": 3.5,
+   "note": "Unblockable effects in prerelease are always decent, ending games out of nowhere when your opponent believes they are safe behind the wall of blockers they built. With the main effect requiring one don, you can attach up to 9 to your lead to swing for game, and although rare, you might be able to give your Rocks.D.Xebec character unblockable too. The fact that this has a counter makes it a good modal card as well. It can always be used as a failsafe 2k counter for your lead. But it also can counter for your Rocks Pirates characters as well, which will come up often enough to keep in mind."
+  },
+  "OP17-056": {
+   "name": "Rocks Pirates",
+   "rarity": "UC",
+   "rating": 4.5,
+   "note": "The Main ability is removal, which is always desired in prerelease. 5 don to bounce a 6c or less is a decent enough rate that I believe that card alone would be 3 stars in prerelease. Where it gets its bonus 1.5 stars is that it has a counter ability that is always a 2k counter for your lead and might be a 2k counter for some of your characters, since it can only counter for your Rocks Pirates characters."
+  },
+  "OP17-057": {
+   "name": "Fullalead",
+   "rarity": "C",
+   "rating": 2.0,
+   "note": "This stage would normally be a skippable and awful card in prerelease, costing you a card from hand just to turn 1 brick a turn into a 1k counter once a turn. In a normal set, I'd say this would be 1 star. However, due to the amount of bricks in this set, with all the Rocks Pirates being bricks and all the big bodies being bricks, I think there will be situations where you have to run this card. If you have few bricks, maybe you can get away with not running this card. If you are at a critical mass of bricks, you'll probably have to run some copies."
+  },
+  "OP17-058": {
+   "name": "Kaido",
+   "rarity": "L",
+   "rating": null,
+   "note": "N/A"
+  },
+  "OP17-059": {
+   "name": "Aramaki",
+   "rarity": "UC",
+   "rating": 5.0,
+   "note": "Big blockers usually get 4 stars base from me, although Aramaki is slightly below the rate of a big blocker, missing a counter or 1k power. He offers enough in return to make up for it. His On Play popping up to 2 2c characters is going to be a huge threat. Popping 2 will be rare but will win you the game on the spot basically, but popping 1 is going to be good enough to build you the lead. This being an uncommon is concerning."
+  },
+  "OP17-060": {
+   "name": "Ulti & Page One",
+   "rarity": "R",
+   "rating": 4.5,
+   "note": "A vanilla 6c would have 8k power. In exchange 2k less power, this card gets an On Play ramp 1 active don and K.O. a 3k power or less effect. Ramping from 6 don to 7 don will allow you to play a 9c the following turn, and there are a decent amount of 9c bodies in this set for this to be game changing. Of course, ramping from 7 to 8 don will allow you to play a 10c the following turn, and there's numerous 10c that you want to get down ASAP. Even if you do not have such an ideal play to follow up, getting the extra don the turn you play this card alleviates some of the off rate power this card has. You might be able to swing enought to secure a kill or play a blocker. The pop effect is going to be live often: popping a chump blocker for your next turn's play or popping a low body will come up. There are a few power minus effects in this set you can combo with this card, although costing 6 don does make this difficult to combo with. This card's upside makes up for its poor rate, and at the end of the day is a 1k counter so the opportunity cost is low, giving them their 4.5 star rating."
+  },
+  "OP17-061": {
+   "name": "Lead Performers",
+   "rarity": "R",
+   "rating": 4.5,
+   "note": "A vanilla 9c would have 1k counter. In exchange for missing counter, Lead Performers gets an On Play that heals a life. That kind of effect normally gets 4 stars base from me. Lead Performers also gets an Activate:Main allowing them to trash themselves to play a King, Queen, or Jack from hand. This bizarrely will come up a lot since all 3 are at UC or C. There will be edge case scenarios where you do activate it to play down a King blocker or Queen charmer to ensure your survival, and due to how often it might occur, I gave Performers a .5 bump."
+  },
+  "OP17-062": {
+   "name": "Kaido",
+   "rarity": "SR",
+   "rating": 4.0,
+   "note": "Big blockers get 4 stars base, and Kaido is on rate for a big body blocker. His Your Turn effect isn\u2019t going to be super relevant but it could give you some extra Don to close out a game if you play other cards that don minus after you play him. I don't think it'll be relvant enough to give him a boost in rating."
+  },
+  "OP17-063": {
+   "name": "Kaido",
+   "rarity": "SR",
+   "rating": 5.0,
+   "note": "A vanilla 10c has 1k counter, so in exchange for missing 1k counter, Kaido gets 2 effects. Kaido's first effect might be relevant, I could see a world where you somehow drew a lot of your brick characters and this frees you, turning all of them into 1ks. However, it\u2019s the activate Main that makes Kaido 5 stars. It\u2019s good when you\u2019re behind, popping your opponent\u2019s best attacker 6c or less, and good when you\u2019re ahead, doing the exact same thing or popping a blocker that\u2019s annoying you. Such large removal attached to an on rate body will always get a 5 star grade from me."
+  },
+  "OP17-064": {
+   "name": "King",
+   "rarity": "C",
+   "rating": 4.5,
+   "note": "Big Blockers get 4 stars base from me base, but King is technically not on rate for a big blocker, missing either 1k counter or 1k power, but with a character this large, missing those stats isn't the biggest deal. His On Opponent's Attack/Once per turn effect more than makes up for whatever stats he's missing, allowing you to dig you out of a bricky hand, turning anything into a 2k. Do be aware, with the expensive prizing on the line your opponent might rule shark you if you pitch counter then try to activate King's ability pitching a brick. Slow down, don\u2019t get too excited, and clearly state that you\u2019re using King's ability after your opponent declares an attack. Then pitch your counter. Since big blockers I normally give 4 stars to, I gave King a .5 bump for his pitch effect. This being at common concerns me."
+  },
+  "OP17-065": {
+   "name": "Queen",
+   "rarity": "UC",
+   "rating": 5.0,
+   "note": "I'm going to claim Queen is the strongest UC in the set, edging out Withdraw Now And Allow Me To Save Face. A vanilla 9c has 11k attack and 1k counter. So for 1k less power and no counter Queen gets 2 really good effects. The first is the keyword Banish, which is always a good keyword in prerelease, and comboing that keyword with high attack is good. His On Play don -1 allows Queen to replace himself in hand and charm 2 of your opponent\u2019s 5c or less attackers for a turn, which buys you a ton of breathing room. With the On Play alone, Queen would be minimum 4.5 stars, maybe even 5 stars. With Banish, Queen is 5 stars easily. This being at uncommon concerns me."
+  },
+  "OP17-066": {
+   "name": "Kurozumi Orochi",
+   "rarity": "C",
+   "rating": 2.0,
+   "note": "1k counters with utility can earn a high grade based on the utility they offer. However, the utility Orochi offers is so bad I was tempted to give him 1.5 stars. Minusing a don isn't a tall ask, but needing a character that costs 10 or more is a tall ask in tandem with the fact his effect is not advantage, it's selection. You lose a card from hand to play him from your hand, you draw 2 and pitch 1. That is 2 for 2, leaving you neutral since his body isn't relevant enough to count as advantage. The only reason I did not go through with lowering his grade by .5 is because of the Elbaph cards in this set that count themselves as 12c characters, so in theory you could play him earlier if you're in desperate need of different cards in hand. But I will probably regret my decision and he might even end up as a 1 star card."
+  },
+  "OP17-067": {
+   "name": "Kurozumi Kanjuro",
+   "rarity": "C",
+   "rating": 4.0,
+   "note": "1k counters with utility can earn a high grade, and Kanjuro's utlity is amazing. While his On Play does require that you have a 10c or higher, with the amount of Elbaph 12c in tandem with the normal 10c cards in this set, it's not a tall ask. Playing this late game to either push for game or clear board in order to survive is going to be really good. The fact that it's a 3k body can help you push as well, requiring only 2 don to pressure. With its floor being a 1k counter, I think it deserves its 4 star rating."
+  },
+  "OP17-068": {
+   "name": "Sasaki",
+   "rarity": "C",
+   "rating": 3.5,
+   "note": "A 3c vanilla 2k counter would have this statline, so I would give him extra stars if his text box was good. It isn\u2019t good, but I think there will be situations where using his When Attacking effect in order to ramp yourself into late game ASAP is the right play. If you play him on 3 don and on your 5 don turn you somehow have a hand full of powerful 9c or more, it might be time to let this effect rip and ramp yourself to 7 don, 9 don your following turn to start dropping big bodies on your opponent. I think that will come up enough to warrant a .5 star buff, though I acknowledge it won\u2019t happen often."
+  },
+  "OP17-069": {
+   "name": "Jack",
+   "rarity": "C",
+   "rating": 4.5,
+   "note": "A vanilla 9c would have 11k power and 1k counter. For 1k less power and missing counter, Jack gets two effects. The first is Character:Rush, which Bandai keeps undervaluing. The second is an On Play don -1 to -2k an opponent\u2019s character this turn. This means Jack can make great use out of his Character Rush, attacking a target that he weakens the turn you play him. I am worried about this being at common."
+  },
+  "OP17-070": {
+   "name": "Scratchman Apoo",
+   "rarity": "C",
+   "rating": 3.0,
+   "note": "Vanilla 2k counter"
+  },
+  "OP17-071": {
+   "name": "Who's Who",
+   "rarity": "C",
+   "rating": 5.0,
+   "note": "1k counters with utility can earn a high grade based on their utility, and Who's Who is the most powerful utility in the set. His On Play being able to pop 2 chump blockers late game for 2 don is going to end a lot of games and annoy a lot of players when it hoses them. You can play it earlier as well if there's one blocker really annoying you or some other weak 2c character your opponent might be running. Because his trigger plays him and his On Play takes place, his trigger is even more insane, with it randonly ending games. If you trigger it from life and pop 2 blockers, it saves you the don investment on your turn and gives you a 3k body you can swing with if you're pushing for game. With all that in mind, I think he deserves his 5 star rating. If Bonk Punch didn't have blocker, this would be my pick for best common in the set."
+  },
+  "OP17-072": {
+   "name": "Black Maria",
+   "rarity": "C",
+   "rating": 3.5,
+   "note": "All chump blockers get a starting score of 3 stars from me. Maria's On Your Opponent's Attack Once Per Turn effect lets you turn one of your cards into a 1k counter, which is good with the amount of bricks in this set. I was tempted to give Maria 4 stars, but it being Once Per Turn and only a 1k counter was enough to hold me back. Do be aware, with the expensive prizing on the line your opponent might rule shark you if you pitch counter then try to activate her ability pitching a brick. Slow down, don\u2019t get too excited, and clearly state that you\u2019re using Maria ability after your opponent declares an attack. Then pitch your counter."
+  },
+  "OP17-073": {
+   "name": "Basil Hawkins",
+   "rarity": "UC",
+   "rating": 2.5,
+   "note": "All 2k counters start with 2 stars base that can be upgraded based on what they offer. Basil does offer some utility, but not good utility. There will be situations where you should play this, if you\u2019re going first and you\u2019re at 3 don with your next cheapest play being a 6 don play, you probably should play Hawkins and pitch a card to smooth out your curve. Same logic going 2nd at 4 don and your next cheapest play is 7c. But even if it's the right choice, it still won't feel good. Losing a 2k counter in hand and another card for a 1k body on board will feel like you're helping your opponent more than you're helping yourself."
+  },
+  "OP17-074": {
+   "name": "Yamato",
+   "rarity": "R",
+   "rating": 4.5,
+   "note": "All chump blockers get base 3 stars from me. Her On Play ramping you a don is really good in prerelease. Getting a ramp as early as turn 2 usually changes your whole game plan, letting you play a character that costs 1 more each turn will stack up. Even if it doesn't work out that perfectly, having the extra don to swing with also feels amazing, and the chances for you to play 2 characters in a single turn goes up as well."
+  },
+  "OP17-075": {
+   "name": "X. Drake",
+   "rarity": "C",
+   "rating": 2.5,
+   "note": "All 2k counters start with 2 stars base that can be upgraded based on what they offer. X. Drake doesn't offer much of anything, his On Play allows you to don -2 to rip a card at random from your opponent's hand. Due to the don -2 cost, you really can't play this until you're at a high don count so you don't fall too behind your opponent. Losing a 2k counter to maybe rip your opponent's best card for 2 don is not a great gamble. I do see a world where you play this late game if you have the open don and aren't afraid of losing the 2k counter, so I will give it a maybe undeserved .5 star boost in rating."
+  },
+  "OP17-076": {
+   "name": "Wo Ro Ro Ro Ro!! I Think I\u2019ve Sobered Up!!",
+   "rarity": "R",
+   "rating": 4.0,
+   "note": "A counter that can counter for both your leader and characters will get 3 stars base from me. A 0 don pitch counter is useful in this set given how many bricks there are in this set as well. The trigger is a nice bonus that you might feel safe enough using if you have enough counter in hand already, and why I gave it a boost in rating."
+  },
+  "OP17-077": {
+   "name": "Gundari Meteor Shower",
+   "rarity": "UC",
+   "rating": 2.5,
+   "note": "Counter events that only counter for your leader I give 2 stars base to. This countering for such a good rate at the cost of a don is worth it, especially late game where the don doesn't matter. The main might be used if you're out of options and ramping seems worth it. But losing 3 cards in hand to ramp into your late game is rarely going to be the right choice. Due to its above average rate and its edge case uses for its Main ability, I gave it a slight bump in rating."
+  },
+  "OP17-078": {
+   "name": "Drunken Dragon Bagua",
+   "rarity": "C",
+   "rating": 3.0,
+   "note": "I really like event counters that can counter for both your leader and your characters. I usually give 1 don counters that can counter for both 3 stars base. Costing 2 don is a taller ask, but it is on rate enough, 2 don for 4k is about what we expect out of a card. Its Activate Main is really funny to me. Most of the time, you should avoid using it always. But, there is a world where you have a 10c in hand, this card, and 2 expensive bricks on your 5 don turn. You have no other play than to use the Activate Main, trashing your 2 bricks to go up to 8 don, 10 don next turn and playing your 10c. The same would apply to your 4 don turn and you have a 9c to play the following turn. Due to this card costing 2, I would deduct maybe half a point, but due to the activate main maybe coming up, I'm giving it half a point back."
+  },
+  "OP17-079": {
+   "name": "Monkey.D.Luffy",
+   "rarity": "L",
+   "rating": null,
+   "note": "N/A"
+  },
+  "OP17-080": {
+   "name": "Usopp",
+   "rarity": "SR",
+   "rating": 2.0,
+   "note": "I usually give searchers 2 stars as its floor and an uncapped celing for best case scenario having a bunch of targets. However, Usopp isn't on rate for a normal searcher. Searchers usually have 1k more power than cost and dig 5 deep. Usopp digs 3 deep and is missing 1k power compared to that rule of thumb. However, Usopp has an upside of being a 5k if someone has a 12c character. This the payoff we see for all 2c Elbaph cards alongside another effect, Usopp's other effect being his On Play search. What's interesting about Usopp is that he can search for a card that enables his 12c payoff, and his On Play is not locked behind a 12c requirement that we see for other Elbaph cards. Do keep in mind that like all Elbaph cards, either player can control the 12c character. Relying on your opponent to play a 12c body is not likely, but it's important to know. All of this to say, his upside kind of negates his downside, so leaving him at a baseline 2 star searcher grade I'm fine with. With searcher cards, I normally give all targets a .5 bump to incentivize me to run more targets if I'm running the searcher themselves."
+  },
+  "OP17-081": {
+   "name": "Gerd",
+   "rarity": "R",
+   "rating": 4.0,
+   "note": "All 2k counters get a base score of 2 stars and can be upgraded based on what they offer. Gerd's first line of text gives you a 12c body, enabling your 12c payoffs, so she is really important if you have a lot of the 12c payoffs since she can come down so early in comparison to other 12c cards this set. Her On Play is card selection and quite useful too, since you're trading the worst card in you hand for your best 8c or less card in your trash. With all of this in mind, I think she offers enough utility and her baseline of being a 2k is enough for me to give her 4 stars."
+  },
+  "OP17-082": {
+   "name": "Sanji",
+   "rarity": "C",
+   "rating": 2.0,
+   "note": "A vanilla 2c would have 4k power normally, so Sanji is missing 2k power. His upside of being a 5k if someone has a 12c is the payoff we see for all 2c Elbaph cards alongside another effect. However, unlike the other 2c Elbaph 12c payoffs, Sanji's On Play is not locked to the 12c requirement. His On Play seleciton effect of drawing 2 trashing 2 we see in prerelease all the time, and while decent, we usually see it on a better rate body than Sanji. You're going down a card, getting a bad body if you do not have a 12c and filtering your hand. Do keep in mind that like all Elbaph cards, either player can control the 12c character. Relying on your opponent to play a 12c body is not likely, but it's important to know. If your deck has enough 12c enablers, this card is be 3 stars. If your deck does not have a lot or just 1 enabler, he's 1 star, which is why I've given him the grade between the two scenarios, 2 stars."
+  },
+  "OP17-083": {
+   "name": "Jinbe",
+   "rarity": "C",
+   "rating": 2.0,
+   "note": "A vanilla 2c would have 4k power normally, so Jinbe is missing 2k power. His upside of being a 5k if someone has a 12c is the payoff we see for all 2c Elbaph cards alongside another effect. Jinbe's specific upside is giving him the blocker keyword if someone has a 12c. Do keep in mind that like all Elbaph cards, either player can control the 12c character. Relying on your opponent to play a 12c body is not likely, but it's important to know. If your deck has enough 12c enablers, this card is be 3 stars. If your deck does not have a lot or just 1 enabler, he's 1 star, which is why I've given him the grade between the two scenarios, 2 stars."
+  },
+  "OP17-084": {
+   "name": "Tony Tony.Chopper",
+   "rarity": "UC",
+   "rating": 3.0,
+   "note": "All 2k counters get a base score of 2 stars and can be upgraded based on what they offer. Unlike other Elbaph cards that give you a 5k body for having a 12c, Chopper lacks that effect and gets a game ending On Play that gives a character Unblockable. What's interesting is the Character you give Unblockable to isn't type locked. Do keep in mind that like all Elbaph cards, either player can control the 12c character. Relying on your opponent to play a 12c body is not likely, but it's important to know. Your opponent will mald if they enable an unblockable swing with a 12c on the field. If you have enough 12c enablers, his rating could go up, but he's decent enough at a floor as a 2k counter that I'll give him 3 stars base, since even if you don't have any 12c your opponent might."
+  },
+  "OP17-085": {
+   "name": "Dorry",
+   "rarity": "UC",
+   "rating": 3.0,
+   "note": "A vanilla 5c would have 7k power normally, so Dorry is missing 2k power. In exchange, he is a 12c, enabling all of your Elbaph payoffs. He also gets an On Play, playing a Brogy from your trash or your hand. You cannot play other character cards after doing this, so do this last if you plan on playing other characters the same turn. Most ideally, you will want to play the Brogy from trash, which is possible for you to do if you pitch one of them to counter. Flooding the board with two 5k power characters for 5 don isn't an amazing rate, but it's not god awful either. If you don't have a lot of Elbaph 12c payoffs and/or if you only have one or no Brogys, he's 2 stars. If you do have a lot of Elbaph 12c payoffs and/or a lot of Brogys, he's 4, which is why I've averaged his grade to 3."
+  },
+  "OP17-086": {
+   "name": "Nami",
+   "rarity": "UC",
+   "rating": 2.0,
+   "note": "I'm giving Nami a searcher grade since she's what I call a reverse searcher. Nami has the same power and counter as a 1c searcher, the only difference is with a searcher you want the targets on the top X cards of your deck, while Nami wants you to have the target in hand to pitch. Both would leave you hand neutral if you get the effect off. However, while a 1c searcher can whiff, while you have Nami in hand you know if you have another Elbaph to pitch or not. All of this to say, she gets the searcher grade of 2 stars at her floor, uncapped ceiling depending on how many Elbaph cards you run. With searcher cards, I normally give all targets a .5 bump to incentivize me to run more targets if I'm running the searcher themselves."
+  },
+  "OP17-087": {
+   "name": "Nico Robin",
+   "rarity": "R",
+   "rating": 2.0,
+   "note": "A vanilla 2c would have 4k power normally, so Robin is missing 2k power. Her upside of being a 5k if someone has a 12c is the payoff we see for all 2c Elbaph cards alongside another effect. Her other effect is her On Play, which is live if there is a 12c allowing you to -3k a character. For 2 don investment, you -3k something, which is a better rate than if you just attach the don. It's decent late game, to secure a kill and develop, but I don't think I'd mind playing her early just to get the body on board if I plan on playing a 12c later. Do keep in mind that like all Elbaph cards, either player can control the 12c character. Relying on your opponent to play a 12c body is not likely, but it's important to know. If your deck has enough 12c enablers, this card is be 3 stars. If your deck does not have a lot or just 1 enabler, she's 1 star, which is why I've given him the grade between the two scenarios, 2 stars."
+  },
+  "OP17-088": {
+   "name": "Hajrudin",
+   "rarity": "C",
+   "rating": 3.0,
+   "note": "Vanilla 2k counter"
+  },
+  "OP17-089": {
+   "name": "Jaguar.D.Saul",
+   "rarity": "R",
+   "rating": 4.0,
+   "note": "Searchers at 4 don usually have 6k power and no counter, so Saul is on rate. Those cards I normally give 3 stars base to with an uncapped ceiling based on how many targets you have. However, searchers, even those at 4 don, usually dig 5 deep compared to Saul's 3. Saul does have an effect making him a 12c to make up for that lower search range. Saul is one of two 12c enablers that are good bodies on rate, the other being Loki. All other 12c enablers are poor rate or utility cards. Saul can also search for 12c payoffs since he himself enables their payoffs. His upside makes up for his lower search range and then some, so I'm comfortable with him being getting a slightly better grade than most 4c searchers. With searcher cards, I normally give all targets a .5 bump to incentivize me to run more targets if I'm running the searcher themselves."
+  },
+  "OP17-090": {
+   "name": "Franky",
+   "rarity": "C",
+   "rating": 2.0,
+   "note": "A vanilla 2c would have 4k power normally, so Franky is missing 2k power. His upside of being a 5k if someone has a 12c is the payoff we see for all 2c Elbaph cards alongside another effect. His other effect is an On Play locked behind there being 12c, allowing him to K.O.ing a 2c. If you have a 12c in your deck, I don't know if I'd play him without getting his On Play effect off. Being able to pop cheap blockers or other small bodies cards your opponent plays seems better than getting the body down early. Do keep in mind that like all Elbaph cards, either player can control the 12c character. Relying on your opponent to play a 12c body is not likely, but it's important to know. If your deck has enough 12c enablers, this card is be 3 stars. If your deck does not have a lot or just 1 enabler, he's 1 star, which is why I've given him the grade between the two scenarios, 2 stars."
+  },
+  "OP17-091": {
+   "name": "Brook",
+   "rarity": "C",
+   "rating": 2.0,
+   "note": "A vanilla 2c would have 4k power normally, so Brook is missing 2k power. His upside of being a 5k if someone has a 12c is the payoff we see for all 2c Elbaph cards alongside another effect. His other effect is an On Play locked behind there being a 12c, getting to rip a card from your opponent's hand. I don't know if I'd play him without the 12c already on field. If you play him early on expecting to play a 12c later, you miss out on his On Play, but you get a 5k swing a turn earlier while being don efficient. Do keep in mind that like all Elbaph cards, either player can control the 12c character. Relying on your opponent to play a 12c body is not likely, but it's important to know. If your deck has enough 12c enablers, this card is be 3 stars. If your deck does not have a lot or just 1 enabler, he's 1 star, which is why I've given him the grade between the two scenarios, 2 stars."
+  },
+  "OP17-092": {
+   "name": "Brogy",
+   "rarity": "UC",
+   "rating": 3.0,
+   "note": "A vanilla 5c would have 7k power normally, so Brogy is missing 2k power. In exchange, he is a 12c, enabling all of your Elbaph payoffs. He also gets an On Play, playing a Dorry from your trash or your hand. You cannot play other character cards after doing this, so do this last if you plan on playing other characters the same turn. Most ideally, you will want to play the Dorry from trash, which is possible for you to do if you pitch one of them to counter. Flooding the board with two 5k power characters for 5 don isn't an amazing rate, but it's not god awful either. If you don't have a lot of Elbaph 12c payoffs and/or if you only have one or no Dorrys, he's 2 stars. If you do have a lot of Elbaph 12c payoffs and/or a lot of Dorrys, he's 4, which is why I've averaged his grade to 3."
+  },
+  "OP17-093": {
+   "name": "Monkey.D.Luffy",
+   "rarity": "SR",
+   "rating": 4.5,
+   "note": "A Vanilla 8c would normally have 10k power and 1k counter. Luffy is 2k power weaker than that rate and lacks the counter in exchange for for an interesting textbox. I'll talk about his On Play first, which replaces himself in hand and also generates an additional card of value by reviving a 2c card. What's interesting is if you revive Gerd or Rodo, Luffy enables his first line of text, getting Rush if there's a 12c on the field, making Luffy the only Elbaph payoff card that can enable himself. Even outside of those revive targets, reviving a blocker or a decent threat will happen often too. There are a decent amount of 12c in this set, so Luffy will get Rush often enough even if you don't revive a 12c. Do keep in mind that like all Elbaph cards, either player can control the 12c character. Relying on your opponent to play a 12c body is not likely, but it's important to know. All of this to say that his downsides compared to a vanilla character is made up for the fact he draws a card On Play and revives your best 2c and while getting Rush often enough that I'd say he's 4.5 stars. If he doesn't have rush, he's 4 stars, if he has rush, he's 5 stars, which is why I've given him the 4.5 star rating."
+  },
+  "OP17-094": {
+   "name": "Rodo",
+   "rarity": "UC",
+   "rating": 2.5,
+   "note": "All 2k counters get a base score of 2 stars and can be upgraded based on what they offer. Rodo has an effect turning himself into a 12c enabling all of your Elbaph payoffs. Rodo is the cheapest 12c enabler, however, unlike other 12c enablers, he's absolutely useless on field in comparison to the other 12c enablers giving you something more than just the enabling. Because of this, I'm not comfortable ranking him any higher than 2.5 stars."
+  },
+  "OP17-095": {
+   "name": "Roronoa Zoro",
+   "rarity": "C",
+   "rating": 3.5,
+   "note": "All 2k counters get a base score of 2 stars and can be upgraded based on what they offer. His upside of being a 5k if someone has a 12c is the payoff we see for all 2c Elbaph cards alongside another effect. Zoro's other effect is board protection, letting you trash 3 cards from the top whenever your opponent tries to remove a card with effect. It's not limited to once per turn and not limited to having a 12c like some other Elbaph card effects are. It protects all characters as well, not just Elbaph. There's enough removal this set that this effect will be relevant and good enough to run even if you have no 12c. With all of this in mind, I think he offers enough utility and his baseline of being a 2k is enough for me to give him 3.5 stars. He does marginally go up in rating if you have enough 12c, but it's not enough for me to increase his score especially since you don't want to be swinging with him and leaving him vulnerable to be killed via swings rather than protect your board from removal. He is the best protection removal in this set, protecting your whole board and not costing you a relevant resource in prerelease, cards in deck. I've never seen anyone deck out in prerelease nor have I seen a time out win via cards in deck in prerelease."
+  },
+  "OP17-096": {
+   "name": "I'm Luffy!! The Man Who's Gonna Become the King of the Pirates!!",
+   "rarity": "R",
+   "rating": 2.5,
+   "note": "I really like event counters that can counter for both your leader and character. However, this event requires you to have a 12c character in order to activate. While there are a lot of 12c, and you'll probably naturally have a lot in deck, there will be situations where you fail to draw your 12c in tandem with this card and it'll be a dead card in hand. What's interesting about this card is it requires you to have the 12c, not there to be one on the field, which is unlike the other Elbaph cars we've seen. Maybe this is a translation error, or maybe the other cards are mistranslated. This card also has a trigger to grab the best Elbaph card in your yard given the situation. Not an amazing trigger, but relevant still. With only a few 12c in your deck, this card is 2 stars. With a lot, it's 3 stars, which averages my grade."
+  },
+  "OP17-097": {
+   "name": "Instead I'll Feed on this Rage!! And Use It to Bring the World to Ruin!!",
+   "rarity": "C",
+   "rating": 2.5,
+   "note": "I was going to give this card the base 2 star rating I give to all event counters that only counter for leaders, thinking that the main wasn't going to be relevant. However, there is a lot of cost removal effects in this set, and several characters and events can K.O. up to 2 characters. If you find an opportunity to use the removal in tandem with this card's main effect, you might be able to blow your opponent out horribly. It won't come up often, but it's good to keep in mind and enough for me to give it a slight bump in rating."
+  },
+  "OP17-098": {
+   "name": "Gum-Gum Kong Pistol",
+   "rarity": "C",
+   "rating": 4.5,
+   "note": "Leader only counters usually get 2 stars from me. This card's Main allows you to rest 6 more don, so 7 don in total, to K.O. 2 6c or less if there is a 12c on the field. 7 don to pop 2 6c or less is an amazing rate. Do keep in mind that like all Elbaph cards, either player can control the 12c character. Relying on your opponent to play a 12c body is not likely, but it's important to know. If you have even one 12c in your deck, you should run this and pray you draw both, if you do, you probably win. Even if you have no 12c, this card is still worth it to run and just pray your opponent plays a 12c, with its floor being a leader counter there isn't much opportunity cost. This being at common is concerning, only held back by the activation requirements."
+  },
+  "OP17-099": {
+   "name": "Charlotte Linlin",
+   "rarity": "L",
+   "rating": null,
+   "note": "N/A"
+  },
+  "OP17-100": {
+   "name": "Capone \"Gang\" Bege",
+   "rarity": "C",
+   "rating": 3.0,
+   "note": "Vanilla 2k counter"
+  },
+  "OP17-101": {
+   "name": "Caribou",
+   "rarity": "C",
+   "rating": 4.0,
+   "note": "A vanilla 5c would have 7k power. For 1k power less, Caribou gets a good trigger, popping a 5c or less in exchange for pitching a card, and a useful, although dangerous, activate main effect. His Activate: Main Once Per Tun effect is giving you minimum 3 don worth of value if your opponent has a rested character in exchange for you drawing a life. This is an incredible effect if you're ahead, since your opponent is probably using swings at your board rather than pressuring your life, starving you. But if you draw Caribou you can negate that plan, letting you pressure their board back and giving you card draw from your starved life. Using this effect every turn might be a bait, since eventually the life will catch up with you, but most of the time you'd prefer him over a vanilla character due to his incredible trigger and Main effect."
+  },
+  "OP17-102": {
+   "name": "Charlotte Oven",
+   "rarity": "UC",
+   "rating": 3.0,
+   "note": "A vanilla 4c would have 6k power. In exchange for 2k missing power, Oven gets an On K.O. effect that lets you replace him with another 4k or less power character from your trash. If you have a blocker or a decent weak body in yard, your opponent will have a difficult choice of either ignoring him or continually take hits from him. At 4k attack, he only takes 1 don to pressure your opponent's leader. With his trigger letting you play him out as well, he does enough to make up for his downsides to maintain an average rating of 3."
+  },
+  "OP17-103": {
+   "name": "Charlotte Katakuri",
+   "rarity": "UC",
+   "rating": 4.0,
+   "note": "A vanilla 6c would have 8k power. For 4k less power, you get to heal a life and give an opponent's character -3k for a turn. Let's call the -3k 3 don worth of value, it could be more if you have multiple swings at the character you minus, but baseline you should have a leader swing at the target. That makes up for 3k worth of missing power, and the heal is worth a lot more than the final 1k missing power. While there will be times you prefer a vanilla character over this card, especially if you cannot get value out of the -3k, there will be games where the heal plus the minus is so much stronger and desired than a vanilla character. The trigger giving you a semi-relevant body sometimes is enough for me to give him such a high grade."
+  },
+  "OP17-104": {
+   "name": "Charlotte Cracker",
+   "rarity": "UC",
+   "rating": 4.0,
+   "note": "A vanilla 3c character would have 5k power. For 1k power less, you get a mediocre body trigger and the option to play him with 2 extra don to heal a life. He's also modal in your hand, giving you the option to play him on 3 don for the tempo or 5 don with the heal. I think I would always greed it and not play him on 3 don, even if I'm at 3 don with no other play and already have a better 5 don play. But playing him in the scenario I laid out is probably the right play. He's the only Big Mom 4k body that I'd consider playing without the additional don cost, because the others would be so off rate for their base cost without the 2 extra don to rest. His trigger allowing you to play him is semi-relevant enough for him to get his high grade."
+  },
+  "OP17-105": {
+   "name": "Charlotte Chiffon",
+   "rarity": "C",
+   "rating": 1.5,
+   "note": "A vanilla 5c character would have 7k power. For 7k power less, Chiffon needs an incredible effect to make up for that horrible rate. Her On Play does not make up for that horrible rate. Though you could find utility for her, which is why I couldn't bring myself to give her 1 star, she needs to pitch a trigger in order to get her On Play, making you lose 2 cards in hand in order to bounce your opponent's character with trigger. Going 2 cards down in your hand to bounce your opponent\u2019s best trigger character isn\u2019t good enough, especially for 5 don."
+  },
+  "OP17-106": {
+   "name": "Charlotte Smoothie",
+   "rarity": "C",
+   "rating": 3.0,
+   "note": "A vanilla 5c character would have 7k power, but Smoothie isn't even a 5c character in my eyes. I would never play her on 5 don, since 5 don for 4k is a huge tempo loss. Instead, with her On Play requiring 2 more don to rest, I'm going to consider her a 7c character and compare her to a vanilla 7c character, which would have 9k power. For 5k power less, Smoothie heals you a life and your opponent trashes a card from hand. That is playing one card from hand, getting a 4k body (meh) healing a life (nice) and trashing a card from your opponent's hand (nice) for 7 don. With all the rest and pop effects for cheap blockers in this set, healing is a much safer bet than playing a chump blocker when trying to survive. Ripping your opponent's worst card (if they make the right choice) does put pressure and make math easier for you on future turns. Her trigger isn't the worst either, letting you get a 4k body out of nowhere. With her on play not being bad, especially if you need a heal to survive, and her random trigger, I think she offers enough to maintain an average 3 star rating."
+  },
+  "OP17-107": {
+   "name": "Charlotte Daifuku",
+   "rarity": "UC",
+   "rating": 3.5,
+   "note": "A 3c vanilla 2k counter would have Daifuku's statline, so starting him off at 3 stars is where I'll begin. His trigger allows him to play himself which I'll give him a .5 star buff for. Though a 4k body isn't exactly what I'd consider a decent trigger, it's not awful. Having the option to establish this body if you have no other play will come up often enough that I'm fine giving him this rating."
+  },
+  "OP17-108": {
+   "name": "Charlotte Brulee",
+   "rarity": "C",
+   "rating": 4.0,
+   "note": "Chump blockers always get 3 stars base from me. Brulee's trigger is going to be annoying to lose to when you're pushing for game. When it matters, it will be the deciding factor of the game, so even though triggers are rare, it hoses so hard that I'm giving her a 1 star bump for the trigger alone."
+  },
+  "OP17-109": {
+   "name": "Charlotte Pudding",
+   "rarity": "R",
+   "rating": 4.5,
+   "note": "A vanilla 3c would have 5k power. For 1k less power, Pudding gives you a really good On Play if you're able to pitch a Trigger. You play Pudding, you pitch a card, you draw 3. That's trading in 2 cards in hand for the 4k body and 3 new cards in hand. There are a lot of good trigger in the set that you'd prefer to keep in hand, but if I have nothing else to pitch, I think I would trade that in for 3 random cards from the top of the deck. Of course, more ideally, you wait until you draw a trigger you'd want to pitch. Her own trigger isn't very good, even with a critical mass of Big Mom Pirates, and I'd greed it and keep her in hand so I can play her for the advantage rather than triggering her for the search. As far as what she gives you on board, a 4k body is relevant, only requiring 1 don to pressure lead."
+  },
+  "OP17-110": {
+   "name": "Charlotte Perospero",
+   "rarity": "C",
+   "rating": 2.0,
+   "note": "A vanilla 7c would normally have 9k power. For 5k missing power, Perospero gets a \"flood\" effect, allowing you to play another Big Mom card with 6c or less. \"Flood\" is in quotations because flooding the board with 4k attackers isn't great unless you have Linlin to follow up the next turn. In order to use his effect, you're going down two cards in hand for 2 4k bodies. He also gains rush, which seems nigh useless since he's only a 4k power card. With a lot of Big Mom cards needing 2 more don to get their heal effect, Perospero will often not be worth it to play since you won't have the don leftover to get the heal effects they offer. His trigger plays himself out, being a 4k body, it isn't decent but it isn't awful. Because his On Play seems almost useless, I'm only comfortable rating him 2 stars."
+  },
+  "OP17-111": {
+   "name": "Charlotte Mont-d'or",
+   "rarity": "C",
+   "rating": 3.5,
+   "note": "A vanilla 3c character would have 5k power. For 1k power less, Mont-d'or gets two effects. The first is an On Play that lets you pop a 1c or less if you reveal 2 triggers from your hand. This can be relevant giving the amount of 1c searchers and other playable 1c. The trigger lets you play this, giving you a 4k body which isn't amazing but isn't awful. Interestingly, unlike other Charlotte triggers that don't allow for their On Play to take place since their On Plays are Your Turn, Mont-d'or does not have such a restriction. The On Play might come up, the trigger might come up, which will mean the On Play can come up on your opponent's turn, all of that makes him good enough to be 3.5 stars."
+  },
+  "OP17-112": {
+   "name": "Charlotte Linlin",
+   "rarity": "SR",
+   "rating": 5.0,
+   "note": "A vanilla 10c would have 1k counter. In exchange for missing counter, Big Mom gets 2 effects. Her Your turn effect turns your 4k trigger bodies into 8k. Though requiring some setup, this means she can impact the board the turn she comes down with one or more 4k Trigger bodies on board prior to you playing her. Each character meeting these conditions generates 4 don of value for each one. Your opponent will also have to waste swings on them on their turn, killing 4k bodies lest they be swung at for 8k again. Her other effect is her On Play which replaces herself immediately in hand and gives you the option to heal or force your opponent to draw a life. Because you just used 10 don without impacting board (unless you had a 4k trigger body), I think the majority of the time you'll pick the heal in prerelease. There will be cases where you're so far ahead the life draw option will be a safe choice to close out a game and put maximum pressure to your opponent, but I think you're choosing heal most of the time. With all those upsides in mind, she deserves her 5 star rating. Initially, I was considering giving her a 4.5 rating, but I think that would be grading on a curve due to the other crazy cards in this set like Shanks or Kaido that affect board immediately on play unlike Linlin's situational impact. She's so clearly a 5 star card it's unfair to fault her for her lack of board impact if you're lacking a 4k trigger body. She's still a 5 star card even without a 4k trigger body on board, replacing herself and healing you most of the time. Having her in your deck increases the rating of each 4k trigger body in your pool by .5 stars, since they combo with her. I would say those cards are +1 star when you have the combo, but since you're not always going to draw them in combination with Linlin, .5 stars extra is my rating for them."
+  },
+  "OP17-113": {
+   "name": "Streusen",
+   "rarity": "R",
+   "rating": 3.0,
+   "note": "Bandai is testing out 1c 2k counter searchers, which search top 3 compared to normal searchers looking top 5. While I normally give two halves of the same coin the same grade (vanilla 1ks vs vanilla 2ks), I think ranking 2k searchers a bit higher than their counterparts is fair. 2k counters get 2 stars base from me. Searchers get 2 stars base with uncapped ceiling if you run enough targets. Slap them together you get a 3 star base card with an uncapped ceiling. I do believe you run this even if you have only a couple of targets. Pitching it as a 2k will be the most common thing you do with them, but there will be situations where you check your trash and hand and realize you haven't seen a single Big Mom pirate. That is when you let him rip if you need a play. With searcher cards, I normally give all targets a .5 bump to incentivize me to run more targets if I'm running the searcher themselves."
+  },
+  "OP17-114": {
+   "name": "The 3 Sweet Commanders",
+   "rarity": "R",
+   "rating": 4.0,
+   "note": "A vanilla 6c character would have 8k power, but this card isn't even a 6c character in my eyes since I would never play a 6c 4k. Since their On Play requires 2 more Don to rest, I'm going to consider them an 8c character and compare her to a vanilla 8c character, which would have 10k power. For 6k power less, this replaces itself and heals you a life and -3k an opponent's character. The first two effects are good, effectively giving you a +2 if you count their pathetic body, and the -3k does impact the board and alleviate some of the don you had to dump into her, giving you at least 3 don worth of value depending on how many swings can dogpile onto what you -3k. With all the rest and pop effects for cheap blockers in this set, healing is a much safer bet than playing a chump blocker when trying to survive. Replacing themselves also helps you try to survive, hopefully drawing you counter. With their on play being good, especially if you need a heal to survive, and her random trigger, I think they offer enough to get 4 stars."
+  },
+  "OP17-115": {
+   "name": "There's Still A Code of Honour? You Clowns!",
+   "rarity": "R",
+   "rating": 3.0,
+   "note": "Event counters that only counter for your leader are 2 stars base. That's a good starting point since countering for a Linlin character is unlikely. With the Main effect being able to give your leader unblockable, that is enough to bump this up to 3 stars. While countering for your Linlin character might come up, it's not often enough to give this card a better grade."
+  },
+  "OP17-116": {
+   "name": "Fulgora",
+   "rarity": "UC",
+   "rating": 2.0,
+   "note": "I am going to ignore the main effect since there's only 1 stage this set and using 3 don to pop it isn't worth it in prerelease. In regards to Fulgora's counter effect, I normally love counter events that can counter for your characters or leader, especially at such a good rate as this card. Those cards normally get 3 stars base from me, however, the requirement of needing 2 characters with trigger is enough of a detriment that I'm ranking this card a full star lower. I'm trying to think of how often I have 2 trigger characters on board in prerelease, and it doesn't happen often enough for me to have a lot of confidence in this counter being live. If you don't have a lot of trigger characters, this card is 1 star. If you have a lot, it goes to its rightful rating of 3 stars for being a character and leader counter. So I've averaged the two for its grade."
+  },
+  "OP17-117": {
+   "name": "Maser Saber",
+   "rarity": "C",
+   "rating": 3.0,
+   "note": "Event counters for lead only get 2 stars base. While technically, this isn't just your leader you can counter for, it's rare the situation will come up where you can counter for a character Linlin you control. This trigger is really good, most of the time your opponent will probably have to let go of the character unless it's late game and they're pushing for game. I am giving it a 1 star buff due to the trigger, not due to the chance at countering for a Linlin character."
+  },
+  "OP17-118": {
+   "name": "Rocks.D.Xebec",
+   "rarity": "SEC",
+   "rating": 4.5,
+   "note": "A vanilla 10c would have 1k counter normally. In exchange for missing counter, Rocks gets 2 effects, the first is becoming a 2k counter if you only control characters without counter. This might come up in prerelease, especially this set with so many brick characters. However, unless you're super bricked, it's probably better to save him in hand and play him when you reach 10 don. His second effect is where he gets his high grade from, On Play replacing himself in hand and playing up to 2 9c total cost differently named Rocks Pirates from your hand is a game ending effect if you're able to make use of it. If you're able to play 2 bodies with him, he's 5 stars. If you're able to play one body with him, he's 4.5 stars. If you have nothing to play with him, he's 4 stars due to him at least drawing you a card. I've averaged all 3 scenarios for his grade."
+  },
+  "OP17-119": {
+   "name": "Loki",
+   "rarity": "SEC",
+   "rating": 5.0,
+   "note": "A vanilla 6c would have a 1k counter. In exchange for missing counter, Loki gets 2 insane effects. His first line of text enables all your 12c payoffs and lets you swing with him with impunity early game, turning himself into an 11k on your opponent's turn. Nothing can really threaten an 11k with normal combat as early as he comes down. Do keep in mind there is power weakening effects that are in this set and maybe he will die via non-normal combat early game. His second effect is mostly what gives him his high sccore. His On Play lets you pop any number of characters with total cost 4 or less. If you pop a 4c or 3c body, your opponent is starting the game way behind. If you pop 2 chump blockers your opponent might as well scoop it up. There are some decent 1c characters as well, so there will be scenarios where you might be able to pop 3 characters. Definitely the Secret you want to rip in your prerelease packs."
+  },
+  "EB04-007": {
+   "name": "Roronoa Zoro",
+   "rarity": "SP",
+   "rating": 5.0,
+   "note": "A 7c vanilla would have 1k counter. Zoro more than makes up for that lack of counter. You can play him on 7 don, and even if he doesn\u2019t get character rush it\u2019s still good to develop the body and give your leader +2k for a turn including your opponent's. If you do get the character rush online with a target to swing at, he feels super unfair. This card was incredible in the dumpsterfire that was op15 prerelease, with him being one of the culprits turning your leader into >5k alongside Holly, Fuza, Smoker, and Zeff (All characters at SR and lower). Zoro was the only one that stacked with the others, turning you into an 8k or 9k sometimes. Sorry for the PTSD reminder of prerelease that set. I was almost tempted to give him 4.5 stars due to him not always having character rush, but it\u2019ll happen enough and him always giving the +2k is enough for me to give him the full 5."
+  },
+  "ST32-002": {
+   "name": "Kouzuki Oden",
+   "rarity": "SP",
+   "rating": 5.0,
+   "note": "A vanilla 5c would have 7k power. Oden is 1k weaker but replaces himself on play and turns one of your opponent\u2019s characters useless for a turn. Have it be a blocker that\u2019s annoying you, or your opponent\u2019s best attacker that costs 6 or less, you\u2019re really happy to play this whenever."
+  },
+  "OP12-056": {
+   "name": "Monkey.D.Garp",
+   "rarity": "SP",
+   "rating": 1.0,
+   "note": "A vanilla 8c would have 10k power and 1k counter. In exchange for 2k power and the counter, Garp offers you nothing. He sucked in his own OP12 prerelease, where you at least had a chance to play a Navy card with him. But even back then, you were going minus 3 cards from hand to get 2 bodies on board. That \u201cbest case\u201d won\u2019t even exist this set with no Navy cards. Garp has legitimately no upside other than to flex an SP you pulled."
+  },
+  "P-107": {
+   "name": "Gol.D.Roger",
+   "rarity": "SP",
+   "rating": 4.0,
+   "note": "A vanilla 8c would have 1k counter. Roger is missing counter in exchange for turning your leader into 7k if a player is at 10 don. Turning your leader higher than 5k in prerelease is an incredible effect, as we\u2019ve seen in the past. There will be times you\u2019re tempted to play him while neither player has 10 don. I do think there are scenarios where you have no choice, but I\u2019m greedy and would always wait for the 10 don play. But that option does remain, which makes him a modal card. He\u2019s either a good 8 drop when either player is at 10 don or an average 8 drop when neither player is at 10. These upsides make up for the lack of counter, but he doesn\u2019t impact the board enough for me to push him higher than 4 stars."
+  },
+  "OP16-098": {
+   "name": "Yamato",
+   "rarity": "SP",
+   "rating": 1.0,
+   "note": "A vanilla 6c would have 8k power. In exchange for 3k power, Yamato gets a bad card selection effect and a revive effect that will never come up in this set with no 8c Black Yamatos to revive. Even in her OP16 prerelease, she wasn't good. Being able to use her activate main made her a 2 star card back then if you drew the combo. This set, without any Yamatos to revive, she is 1 star. Her On Play is selection, not advantage, and it\u2019s not even good selection. We see draw 2 pitch 2 all the time, and she has draw 1 pitch 1."
+  },
+  "OP14-108": {
+   "name": "Silvers Rayleigh",
+   "rarity": "SP",
+   "rating": 5.0,
+   "note": "A vanilla 6c would have 8k power. In exchange for 2k power, Silvers Rayleigh gets an incredible On Play, K.O.ing a 7k power or less if your opponent is at 3 or less life. This card was amazing in OP14 prerelease, and nothing will change this set. Although his activation requirement does mean he\u2019s not always live, in prerelease you\u2019re likely to bring your opponent down to 3 life by the time you want to play this anyways. His trigger allows you to activate his main as well, which is annoying to lose to, and oftentimes will be worth triggering if you have another play in mind for your next turn."
+  },
+  "ST31-004": {
+   "name": "Monkey.D.Luffy",
+   "rarity": "SP",
+   "rating": 4.5,
+   "note": "A vanilla 7c would have 1k counter. In exchange for missing counter, Luffy's On Play's floor allows you to -2k power a character during your turn. Your leader and him will always be 2 cards meeting his Straw Hat requirement, and if you have more straw hats, which are common, this can minus enough power to secure a kill. If you play him on 10 don, you can give him rush by attaching the remaining 3 don, which makes him a modal card. He\u2019s either a good 7 drop, or a really good 10 drop."
+  },
+  "OP13-028": {
+   "name": "Shanks",
+   "rarity": "SP",
+   "rating": 4.5,
+   "note": "A vanilla 10c would have 1k counter. In exchange for the missing counter, Shanks On Play refunds you all your don but doesn't let you play any more cards from hand the turn you play him. Oftentimes late game in prerelease you have a difficult choice: develop board or use your don to swing. Shanks lets you do both. In OP-13 prerelease he was one of the better SRs to get, not the best, but good enough that you were happy to see him. Do your math properly with his refunded don to secure kills on board and hits to life so that you can leave open some don for event counters, or if you don\u2019t have any, pretend to have event counters."
+  },
+  "P-084": {
+   "name": "Buggy",
+   "rarity": "SP",
+   "rating": 1.0,
+   "note": "A vanilla 7c would have 9k power and 1k counter. In exchange for missing 1k power and missing counter, Buggy laughs at you for putting him in your deck. His first line of text making him not able to attack already makes him unplayable. His static effect of freezing all 3c and 4c being symmetrical seems awful for prerelease. There will be cases where you hose your opponent and freeze their weak attackers, but there will be more cases where Buggy a dead card in your hand you can\u2019t play, since doing so will screw your board more than your opponent. And when I say dead card, he is a dead card since he has no counter. His On Play allows you to play a 6c Cross Guild from hand, but there are no Cross Guild in this set. His best case scenario lets you use 7 don to freeze 2 or even 3 of your opponents weakest attackers for the rest of the game, which might come up but it's super unlikely. The average and more likely situation is he\u2019ll be a dead card in your hand or on field."
+  },
+  "ST27-005": {
+   "name": "Marshall.D.Teach",
+   "rarity": "SP",
+   "rating": 5.0,
+   "note": "A vanilla 7c character has 9k power and 1k counter. Teach is missing 1k power and the counter for a really good Activate Main and annoying on K.O. effect. You can kind of look at his activate main ability as an on play, since he can use it the turn he\u2019s played, and you\u2019re probably swinging each turn thereafter unless your opponent wants to keep dropping targets for you to pop. His on KO effect is relevant as well, discouraging your opponent from wasting swings at him lest you bring back your best black card from your trash."
+  },
+  "EB04-061": {
+   "name": "Monkey.D.Luffy",
+   "rarity": "SP",
+   "rating": 4.5,
+   "note": "A vanilla 10c would have 1k counter. Luffy is missing counter in exchange for a cost reduction effect if you're at 1 or less life and a leader buff effect in exchange for pitching a card, this effect also gives him blocker for a turn. Playing Luffy when you're at 1 life will feel great, especially if you have an event counter in hand. But Playing him on 10 don is fine too, since you still get his On Play no matter what. Unfortunately, he does not impact the board so I can't bring myself to rank him the full 5 stars. Luffy was really good in OP15 prerelease, but due to him being at Secret most people never ran into him. This set, he's SP, so even less people will have to deal with him."
+  }
+ }
+}
