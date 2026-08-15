@@ -85,12 +85,8 @@
     "on_play",
     "power_down"
    ],
-   "reqTypes": [
-    "Land of Wano"
-   ],
-   "reqNames": [
-    "Edward Newgate"
-   ],
+   "reqTypes": [],
+   "reqNames": [],
    "reqLeader": [
     "Edward Newgate",
     "Land of Wano"
@@ -223,9 +219,7 @@
     "Land of Wano",
     "Whitebeard Pirates"
    ],
-   "reqNames": [
-    "Edward Newgate"
-   ],
+   "reqNames": [],
    "reqLeader": [
     "Edward Newgate",
     "Land of Wano"
@@ -258,9 +252,7 @@
     "on_play"
    ],
    "reqTypes": [],
-   "reqNames": [
-    "Edward.Newgate"
-   ],
+   "reqNames": [],
    "reqLeader": [],
    "image": "img/OP17-008.jpg"
   },
@@ -416,9 +408,7 @@
     "power_down"
    ],
    "reqTypes": [],
-   "reqNames": [
-    "Edward.Newgate"
-   ],
+   "reqNames": [],
    "reqLeader": [],
    "image": "img/OP17-013.jpg"
   },
@@ -576,9 +566,7 @@
     "counter_event",
     "power_down"
    ],
-   "reqTypes": [
-    "Whitebeard Pirates"
-   ],
+   "reqTypes": [],
    "reqNames": [],
    "reqLeader": [
     "Whitebeard Pirates"
@@ -672,9 +660,7 @@
    "effect": "If your Character with a type including \"Red-Haired Pirates\" would be removed from the field by your opponent's effect, you may rest 1 of your cards instead.",
    "trigger": "",
    "tags": [],
-   "reqTypes": [
-    "Red-Haired Pirates"
-   ],
+   "reqTypes": [],
    "reqNames": [],
    "reqLeader": [],
    "image": "img/OP17-021.jpg"
@@ -736,10 +722,7 @@
    "effect": "If your {East Blue} or {Straw Hat Crew} Character would be K.O.'d, you may rest this Character instead.",
    "trigger": "",
    "tags": [],
-   "reqTypes": [
-    "East Blue",
-    "Straw Hat Crew"
-   ],
+   "reqTypes": [],
    "reqNames": [],
    "reqLeader": [],
    "image": "img/OP17-023.jpg"
@@ -803,9 +786,7 @@
     "removal"
    ],
    "reqTypes": [],
-   "reqNames": [
-    "Shanks"
-   ],
+   "reqNames": [],
    "reqLeader": [
     "Shanks"
    ],
@@ -838,9 +819,7 @@
     "on_ko",
     "draw"
    ],
-   "reqTypes": [
-    "Red-Haired Pirates"
-   ],
+   "reqTypes": [],
    "reqNames": [],
    "reqLeader": [
     "Red-Haired Pirates"
@@ -874,9 +853,7 @@
     "on_play",
     "draw"
    ],
-   "reqTypes": [
-    "Red-Haired Pirates"
-   ],
+   "reqTypes": [],
    "reqNames": [],
    "reqLeader": [
     "Red-Haired Pirates"
@@ -1105,9 +1082,7 @@
     "activate_main",
     "ramp"
    ],
-   "reqTypes": [
-    "Red-Haired Pirates"
-   ],
+   "reqTypes": [],
    "reqNames": [],
    "reqLeader": [
     "Red-Haired Pirates"
@@ -1429,9 +1404,7 @@
     "activate_main",
     "draw"
    ],
-   "reqTypes": [
-    "Rocks Pirates"
-   ],
+   "reqTypes": [],
    "reqNames": [],
    "reqLeader": [
     "Rocks Pirates"
@@ -1774,12 +1747,8 @@
    "tags": [
     "counter_event"
    ],
-   "reqTypes": [
-    "Rocks Pirates"
-   ],
-   "reqNames": [
-    "Rocks.D.Xebec"
-   ],
+   "reqTypes": [],
+   "reqNames": [],
    "reqLeader": [
     "Rocks Pirates"
    ],
@@ -1810,9 +1779,7 @@
    "tags": [
     "counter_event"
    ],
-   "reqTypes": [
-    "Rocks Pirates"
-   ],
+   "reqTypes": [],
    "reqNames": [],
    "reqLeader": [
     "Rocks Pirates"
@@ -1842,9 +1809,7 @@
    "effect": "[On Your Opponent's Attack] You may rest this Stage and trash 1 card from your hand: Up to 1 of your Leader with a type including \"Rocks Pirates\" or up to 1 of your Characters with a type including \"Rocks Pirates\" gains +1000 power during this battle.",
    "trigger": "",
    "tags": [],
-   "reqTypes": [
-    "Rocks Pirates"
-   ],
+   "reqTypes": [],
    "reqNames": [],
    "reqLeader": [
     "Rocks Pirates"
@@ -1943,9 +1908,7 @@
     "on_play",
     "removal"
    ],
-   "reqTypes": [
-    "Animal Kingdom Pirates"
-   ],
+   "reqTypes": [],
    "reqNames": [],
    "reqLeader": [
     "Animal Kingdom Pirates"
@@ -1979,9 +1942,7 @@
     "on_play",
     "activate_main"
    ],
-   "reqTypes": [
-    "Animal Kingdom Pirates"
-   ],
+   "reqTypes": [],
    "reqNames": [
     "Jack",
     "King",
@@ -2207,9 +2168,7 @@
    "tags": [
     "when_attacking"
    ],
-   "reqTypes": [
-    "Animal Kingdom Pirates"
-   ],
+   "reqTypes": [],
    "reqNames": [],
    "reqLeader": [
     "Animal Kingdom Pirates"
@@ -2243,9 +2202,7 @@
     "on_play",
     "power_down"
    ],
-   "reqTypes": [
-    "Animal Kingdom Pirates"
-   ],
+   "reqTypes": [],
    "reqNames": [],
    "reqLeader": [
     "Animal Kingdom Pirates"
@@ -2370,9 +2327,7 @@
    "tags": [
     "on_play"
    ],
-   "reqTypes": [
-    "Animal Kingdom Pirates"
-   ],
+   "reqTypes": [],
    "reqNames": [],
    "reqLeader": [
     "Animal Kingdom Pirates"
@@ -2501,9 +2456,7 @@
    "tags": [
     "counter_event"
    ],
-   "reqTypes": [
-    "Animal Kingdom Pirates"
-   ],
+   "reqTypes": [],
    "reqNames": [],
    "reqLeader": [
     "Animal Kingdom Pirates"
@@ -2536,9 +2489,7 @@
    "tags": [
     "counter_event"
    ],
-   "reqTypes": [
-    "Animal Kingdom Pirates"
-   ],
+   "reqTypes": [],
    "reqNames": [],
    "reqLeader": [
     "Animal Kingdom Pirates"
@@ -2637,9 +2588,7 @@
    "tags": [
     "on_play"
    ],
-   "reqTypes": [
-    "Elbaph"
-   ],
+   "reqTypes": [],
    "reqNames": [],
    "reqLeader": [
     "Elbaph"
@@ -2769,9 +2718,7 @@
    "tags": [
     "on_play"
    ],
-   "reqTypes": [
-    "Elbaph"
-   ],
+   "reqTypes": [],
    "reqNames": [
     "Brogy"
    ],
@@ -3001,9 +2948,7 @@
    "tags": [
     "on_play"
    ],
-   "reqTypes": [
-    "Elbaph"
-   ],
+   "reqTypes": [],
    "reqNames": [
     "Dorry"
    ],
@@ -3071,9 +3016,7 @@
    "effect": "If your Leader has the {Elbaph} type, this Character gains +12 cost.",
    "trigger": "",
    "tags": [],
-   "reqTypes": [
-    "Elbaph"
-   ],
+   "reqTypes": [],
    "reqNames": [],
    "reqLeader": [
     "Elbaph"
@@ -3360,9 +3303,7 @@
     "on_play",
     "power_down"
    ],
-   "reqTypes": [
-    "Big Mom Pirates"
-   ],
+   "reqTypes": [],
    "reqNames": [],
    "reqLeader": [
     "Big Mom Pirates"
@@ -3395,9 +3336,7 @@
     "trigger",
     "on_play"
    ],
-   "reqTypes": [
-    "Big Mom Pirates"
-   ],
+   "reqTypes": [],
    "reqNames": [],
    "reqLeader": [
     "Big Mom Pirates"
@@ -3753,9 +3692,7 @@
     "counter_event"
    ],
    "reqTypes": [],
-   "reqNames": [
-    "Charlotte Linlin"
-   ],
+   "reqNames": [],
    "reqLeader": [
     "Charlotte Linlin"
    ],
@@ -3823,9 +3760,7 @@
     "removal"
    ],
    "reqTypes": [],
-   "reqNames": [
-    "Charlotte Linlin"
-   ],
+   "reqNames": [],
    "reqLeader": [],
    "image": "img/OP17-117.jpg"
   },

@@ -181,14 +181,63 @@ def free_counter_value(cost, effect, trigger):
     return counter_event_value(effect, trigger)
 
 
+# The Leader condition, so it can be cut out before deck requirements are read.
+# "If your Leader is [X] or has the {Y} type," ends at the comma; "your [X]
+# Leader" is the possessive form. Cutting exactly these is what separates
+# "my Leader must be X" from "my deck must contain X".
+#
+# It matters that the cut is precise. Izo reads "If your Leader is [Edward
+# Newgate] or has the {Land of Wano} type, give up to 1 of your opponent's
+# rested Characters -6000 power" -- Land of Wano is purely a Leader condition,
+# so a wildcard Leader answers it and the deck needs no Land of Wano at all.
+# Kouzuki Oden opens with the same clause but then says "play up to 1 Character
+# card with a type including {Land of Wano}", which IS a real deck requirement.
+# Strip the clause and the two cards separate correctly; strip the whole card's
+# types and Oden wrongly looks free.
+# Longest alternative first: the "Leader ... or ... Characters" form must win
+# over the bare "of your Leader with a type including X", or only half the
+# clause gets cut and the other half survives as a phantom deck requirement.
+_LEADER_CLAUSE = re.compile(
+    # "up to 1 of your Leader with a type including "X" or up to 1 of your
+    # Characters with a type including "X"" -- the Leader is an alternative
+    # target for the same effect, so a wildcard Leader makes it always live.
+    # (Distinct from Oden, whose second clause targets a different card.)
+    r"of\s+your\s+Leader\s+.{0,90}?or\s+up\s+to\s+\d+\s+of\s+your\s+Characters"
+    r"\s+with\s+a\s+type\s+including\s+[\"“][^\"”]*[\"”]"
+    r"|(?:If\s+)?your\s+Leader\s+(?:is|has)[^,.;:]*"
+    r"|[Yy]our\s+\[[^\]]{1,40}\]\s+Leader(?:'s)?"
+    r"|of\s+your\s+Leader\s+with\s+a\s+type\s+including\s+[\"“][^\"”]*[\"”]",
+    re.I)
+
+# A requirement is only a *deck* requirement if it needs a card from somewhere
+# the Leader can't be: your hand, deck or trash. "Up to 1 of your [Rocks.D.Xebec]
+# gains [Unblockable]" targets something on your field -- and a wildcard Leader
+# is treated as having every name, so it can be that target. "Play up to 1
+# [Brogy] from your hand" cannot: you can't play your Leader.
+_NEEDS_ANOTHER_CARD = re.compile(r"\b(hand|deck|trash|Characters)\b", re.I)
+
+
+def _is_deck_requirement(text, token):
+    """True if `token` is used somewhere that needs a real card, not the Leader."""
+    for m in re.finditer(re.escape(token), text):
+        lo, hi = max(0, m.start() - 70), min(len(text), m.end() + 70)
+        if _NEEDS_ANOTHER_CARD.search(text[lo:hi]):
+            return True
+    return False
+
+
 def derive_tags(effect, trigger, types, name):
     text = f"{effect} {trigger}"
     tags = [n for n, pat in TAG_PATTERNS if re.search(pat, text)]
 
+    # Requirements the *deck* must satisfy are read from the text with Leader
+    # conditions removed -- those are the Leader's job, not the deck's.
+    deck_text = _LEADER_CLAUSE.sub(" ", text)
+
     # Bandai quotes type names; the OP17 preview source braces them.
-    req_types = {(a or b).strip() for a, b in QUOTED_RE.findall(text)}
+    req_types = {(a or b).strip() for a, b in QUOTED_RE.findall(deck_text)}
     req_names = set()
-    for tok in BRACKET_RE.findall(text):
+    for tok in BRACKET_RE.findall(deck_text):
         t = tok.strip()
         if _is_keyword(t) or _DON_RE.match(t):
             continue
@@ -198,6 +247,11 @@ def derive_tags(effect, trigger, types, name):
     # card with a type including {X}" still needs X-density in the deck, and the
     # solver already excludes a card's own copies when counting enablers.
     req_names.discard(name)
+
+    # Keep only the requirements that genuinely need another card.
+    req_types = {t for t in req_types if _is_deck_requirement(deck_text, t)}
+    req_names = {n for n in req_names if _is_deck_requirement(deck_text, n)}
+
     return tags, sorted(req_types), sorted(req_names), derive_leader_reqs(text)
 
 

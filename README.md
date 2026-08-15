@@ -82,11 +82,24 @@ set keyed to your Leader — "If your Leader is [Shanks]", "if your Leader has
 the {Rocks Pirates} type" — is switched **on**. 20 of 129 OP17 cards carry one,
 and under a normal mono-colour Leader most of them would be dead text.
 
-What it does *not* do is fix riders that need support **in your deck**: Lucky
-Roux still has to find a Red-Haired Pirates card in your deck to reveal. That
-distinction is why the solver keeps `reqLeader` and `reqTypes` as separate
-fields — the Leader answers the first and only deck composition answers the
-second.
+What it does *not* do is fix riders that need a card from somewhere the Leader
+can't be — your hand, deck or trash. That line is where the whole thing turns,
+and getting it wrong made the solver charge cards a brick tax they didn't owe:
+
+| card | rider | verdict |
+|---|---|---|
+| Izo | *"If your Leader is [Edward Newgate] or has the {Land of Wano} type"* | Leader answers it — **no deck requirement** |
+| Building Snake | *"your [Shanks] Leader"* | Leader answers it — **none** |
+| There's No Authority | *"your Leader **or** your Characters with a type including {Rocks Pirates}"* | Leader is a legal target — **none** |
+| Kouzuki Oden | same Leader clause, **then** *"play a {Land of Wano} card **from your hand**"* | **needs Land of Wano in deck** |
+| Lucky Roux | *"reveal a {Red-Haired Pirates} card **from your deck**"* | **needs them in deck** |
+| Dorry | *"play up to 1 [Brogy] **from your hand or trash**"* | **needs Brogy** |
+
+So requirements are read from the text with Leader clauses cut out, and what
+survives only counts if it's used near `hand`, `deck`, `trash` or `Characters`.
+Applying that took the set from 52 cards with "deck requirements" down to **26**
+— the other 26 were phantom, and the mean brick tax per deck fell from 1.76 to
+**0.18**.
 
 Because the wildcard answers every Leader rider identically, it carries no
 ranking information, so the solver applies **no** Leader-synergy adjustment at
