@@ -111,6 +111,16 @@
       }
     }
 
+    // A 2000 counter attached to a body you'd actually cast is worth more than
+    // the same counter on a card that can only ever be pitched.
+    if ((card.counter || 0) >= 2000 && card.category === 'CHARACTER') {
+      const vanilla = S.vanillaPower[Math.min(card.cost ?? 0, 10)] || 12000;
+      if ((card.power || 0) >= vanilla - S.dualPurposeSlack) {
+        v += S.dualPurposeBonus;
+        reasons.push('2k counter on a castable body');
+      }
+    }
+
     // Curve brick: expensive cards you can't cast early.
     let curveBrick = 0;
     if (card.cost != null && card.cost >= S.curveBrickCost) {

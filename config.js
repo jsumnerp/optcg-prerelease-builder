@@ -78,21 +78,23 @@ window.CFG = {
     // for 0.018 rating/card. Tightening further to 3 only buys another 0.2pp.
     curve: { 0: [0, 4], 1: [0, 8], 2: [0, 9], 3: [0, 8], 4: [0, 8], 5: [0, 7], 6: [0, 4], 7: [0, 4] },
 
-    // An expensive card with a 2000 counter is a counter, not a curve slot.
-    // You do not cast Kingdew (7c/8000) in a 40-card sealed deck -- you hold it
-    // and pitch it for 2000. Counting it against the top-end cap made the
-    // solver refuse the very cards it needed to reach the counter target: on
-    // seed 562113 it flagged "curve 7+: 6" and "only 8 2k counters" at the same
-    // time while leaving five 7-cost 2k-counters unplayed.
-    // They still count toward the counter target, the counterless cap and the
-    // deck size -- they just stop competing for a curve slot they were never
-    // going to use.
+    // An expensive card with a 2000 counter doesn't compete for a curve slot
+    // the way a plain fatty does. Kingdew (7c/8000/+2000) is DUAL-PURPOSE: cast
+    // it on 7, or pitch it for 2000 on a turn you'd rather not -- so it is
+    // never a dead draw, which is exactly what the top-end cap exists to limit.
+    // A 7c/9000 with no counter has only one mode and does deserve the cap.
+    //
+    // Counting the dual-purpose ones against it made the solver refuse the very
+    // cards it needed to reach the counter target: on seed 562113 it flagged
+    // "curve 7+: 6" and "only 8 2k counters" simultaneously while leaving five
+    // 7-cost 2k-counters unplayed.
     curveExemptCounterFodder: true,
     curveExemptFromCost: 6,
-    // ...but exempt is not unlimited. Freed from the curve cap the solver will
-    // hoard fodder, and every copy is a card that can never be played: without
-    // this, dead turns went 7.8% -> 9.0%. This caps pure-defence cards directly
-    // instead of pretending they're 7-drops.
+    // Exempt is not unlimited, though. These cards are fine to draw late but
+    // still can't be cast before turn 6, so a deck leaning entirely on them
+    // starts slowly. The cap is about early-game density, NOT about the cards
+    // being useless -- they aren't. It binds rarely: a pool opens ~5.5 of them
+    // and the solver takes ~4.4.
     maxCounterFodder: 5,
     counterFodderWeight: 0.9,
     curveWeight: 1.8,          // score lost per card outside a band
@@ -146,6 +148,17 @@ window.CFG = {
     perThousandPower: 0.35,
 
     counter: { 2000: 0.45, 1000: 0.15, 0: -0.25 },
+
+    // Two cards can both "be a 2000 counter" and be worth very different things.
+    // Kingdew (7c/8000/+2000) is dual-purpose: cast it on 7, or pitch it for
+    // 2000 on a turn you'd rather not. Crone Oli (1c/*0 power*/+2000) is
+    // single-purpose -- it will never be a play, only ever a counter.
+    //
+    // `dualPurposeBonus` pays a 2000-counter card whose body is worth casting
+    // at its cost (within `dualPurposeSlack` of the vanilla benchmark). It is
+    // the difference between counting counters and counting *useful* counters.
+    dualPurposeBonus: 0.5,
+    dualPurposeSlack: 1000,
 
     keyword: {
       blocker: 0.75, rush: 0.45, double_attack: 0.35, banish: 0.20,

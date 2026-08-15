@@ -257,11 +257,28 @@ fills the cheap slots by itself. What counters can't prevent is the top end
 bloating on high-rated fatties, which is what the caps are for. The 7+ cap is
 set to 4 rather than 5: it takes dead turns 8.3% → 7.9% for 0.018 rating/card.
 
-### Counter fodder is not a curve slot
+### A 2000 counter on a real body is worth more
 
-An expensive card carrying a 2000 counter is a **counter**, not a 7-drop. You
-never cast Kingdew (7c/8000) in a 40-card sealed deck — you hold it and pitch
-it. Counting it against the top-end cap made the solver refuse the exact cards
+Two cards can both "be a 2000 counter" and be worth very different things:
+
+| | | |
+|---|---|---|
+| **Kingdew** 7c/8000/+2000 | **dual-purpose** | cast it on 7, or pitch it for 2000 |
+| **Crone Oli** 1c/**0 power**/+2000 | **single-purpose** | never a play, only ever a counter |
+
+`dualPurposeBonus` (0.5) pays a 2000-counter card whose body is worth casting at
+its cost. It's the difference between counting counters and counting *useful*
+counters.
+
+It changes less than you'd expect, because **supply binds before preference
+does**. OP17 prints 6 high-cost 2k counters and 12 low-cost ones; a pool opens
+~5.5 and ~7.4 of them, and the solver already takes ~4.4 of the 5.5. The
+resulting 5.6-low / 4.4-high split is what the set offers, not what the model
+prefers.
+
+The same insight drives the curve exemption: a dual-purpose card is never a dead
+draw, which is exactly what the top-end cap exists to limit, so it shouldn't pay
+that cap. A 7c/9000 with no counter has one mode and does. Counting it against the top-end cap made the solver refuse the exact cards
 it needed: on seed 562113 it flagged `curve 7+: 6` **and** `only 8 2k counters`
 at the same time, while leaving five 7-cost 2k-counters unplayed.
 
