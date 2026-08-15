@@ -15,9 +15,14 @@ offline, which is the point — venue wifi at a prerelease is not a plan.
 
 The app is a static site at the repo root, so it needs no build step.
 
-**Cloudflare Pages (recommended — auto-deploys on every push):**
-dashboard → *Workers & Pages* → *Create* → *Pages* → *Connect to Git* → pick
-this repo, then:
+**Cloudflare (recommended — auto-deploys on every push).** Two routes, both fine:
+
+*Workers + static assets (what the dashboard steers you to now):*
+*Workers & Pages* → *Create* → *Import a repository* → pick this repo → deploy.
+`wrangler.toml` already declares the whole app as static assets from `/`, so
+there is nothing to configure and no build step.
+
+*Classic Pages:* *Create* → *Pages* tab → *Connect to Git*, then:
 
 | setting | value |
 |---|---|
@@ -25,7 +30,13 @@ this repo, then:
 | Build command | *(leave empty)* |
 | Build output directory | `/` |
 
-That's it — every push to `main` redeploys. `_headers` is already in the repo
+Either way, every push to `main` redeploys.
+
+**If your repo isn't in the list**, it's the GitHub App's repository access, not
+the repo: [github.com/settings/installations](https://github.com/settings/installations)
+→ *Cloudflare Workers and Pages* → *Configure* → add it under *Repository
+access*. Repos created after you first authorised Cloudflare aren't included
+automatically. `_headers` is already in the repo
 and tells Cloudflare to revalidate `sw.js`, `config.js` and `data/*` while
 caching card art immutably, so a deploy can't pin you to a stale build.
 

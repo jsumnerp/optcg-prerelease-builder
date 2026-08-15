@@ -1,0 +1,18 @@
+# Deploy as a Worker serving static assets (Cloudflare's "Create a Worker" ->
+# "Import a repository" flow). There is no Worker script: the whole app is
+# static files, so `[assets]` alone is the entire deployment.
+#
+# If you use the older Pages flow instead, ignore this file and set the build
+# output directory to "/" in the dashboard.
+
+name = "optcg-prerelease-builder"
+compatibility_date = "2026-08-15"
+
+[assets]
+# The app lives at the repo root -- there is no build step and nothing to bundle.
+directory = "."
+
+# `none` keeps 404s as 404s. Don't use single-page-application here: it would
+# serve index.html for a missing card image, which turns a broken asset into a
+# silent success and confuses the service worker's cache.
+not_found_handling = "none"
