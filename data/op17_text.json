@@ -39,7 +39,9 @@
   "rarity": "C",
   "traits": "Whitebeard Pirates",
   "effect": "",
-  "trigger": ""
+  "trigger": "",
+  "attribute": "Strike",
+  "vanilla": true
  },
  "OP17-007": {
   "name": "Kouzuki Oden",
@@ -242,7 +244,9 @@
   "rarity": "C",
   "traits": "East Blue/Straw Hat Crew",
   "effect": "",
-  "trigger": ""
+  "trigger": "",
+  "attribute": "Slash",
+  "vanilla": true
  },
  "OP17-036": {
   "name": "Withdraw Now And Allow Me To Save Face",
@@ -354,7 +358,9 @@
   "rarity": "C",
   "traits": "Fish-Man/Impel Down/The Sun Pirates",
   "effect": "",
-  "trigger": ""
+  "trigger": "",
+  "attribute": "Strike",
+  "vanilla": true
  },
  "OP17-052": {
   "name": "Don Marlon",
@@ -473,7 +479,9 @@
   "rarity": "C",
   "traits": "On-Air Pirates/Animal Kingdom Pirates",
   "effect": "",
-  "trigger": ""
+  "trigger": "",
+  "attribute": "Special",
+  "vanilla": true
  },
  "OP17-071": {
   "name": "Who's.Who",
@@ -613,7 +621,9 @@
   "rarity": "C",
   "traits": "Giant/Elbaph/New Giant Pirates",
   "effect": "",
-  "trigger": ""
+  "trigger": "",
+  "attribute": "Strike",
+  "vanilla": true
  },
  "OP17-089": {
   "name": "Jaguar D. Saul",
@@ -697,7 +707,9 @@
   "rarity": "C",
   "traits": "Supernovas/Firetank Pirates",
   "effect": "",
-  "trigger": ""
+  "trigger": "",
+  "attribute": "Ranged",
+  "vanilla": true
  },
  "OP17-101": {
   "name": "Caribou",
@@ -1005,7 +1017,8 @@
   "rarity": "C",
   "traits": "Big Mom Pirates",
   "effect": "",
-  "trigger": "[Trigger] Play this card."
+  "trigger": "[Trigger] Play this card.",
+  "vanilla": true
  },
  "OP17-110": {
   "name": "Charlotte Perospero",

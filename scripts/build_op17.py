@@ -131,6 +131,9 @@ def main():
             "counterEventPower": counter_event_value(effect, trigger),
             "colors": st["colors"],
             "attribute": tx.get("attribute", ""),
+            # True = the card really has no rules text. Without this the gap
+            # report can't tell a vanilla card from one we failed to read.
+            "vanilla": bool(tx.get("vanilla")),
             "types": types,
             "effect": effect,
             "trigger": trigger,
@@ -157,10 +160,13 @@ def main():
     with open(out, "w") as fh:
         json.dump({"set": "OP17", "cards": cards}, fh, indent=1)
 
-    missing_text = [c["id"] for c in cards if not c["effect"] and c["category"] != "LEADER"]
+    missing_text = [c["id"] for c in cards
+                    if not c["effect"] and not c.get("vanilla")
+                    and c["category"] != "LEADER" and c["rarity"] != "SP"]
     print(f"wrote {len(cards)} cards -> {out}")
     print(f"  {len([c for c in cards if c['rarity'] == 'SP'])} SP reprints (stats from Bandai)")
-    print(f"  {len(missing_text)} cards with no effect text: {missing_text[:8]}")
+    print(f"  {len(missing_text)} cards with UNKNOWN text: {missing_text}")
+    print(f"  {len([c for c in cards if c.get('vanilla')])} confirmed vanilla")
 
 
 if __name__ == "__main__":

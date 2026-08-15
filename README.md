@@ -40,9 +40,11 @@ automatically. `_headers` is already in the repo
 and tells Cloudflare to revalidate `sw.js`, `config.js` and `data/*` while
 caching card art immutably, so a deploy can't pin you to a stale build.
 
-There's also `.github/workflows/deploy-cloudflare.yml` if you'd rather deploy
-from Actions (needs `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` secrets).
-The Git integration above needs no secrets, so prefer it.
+`.github/workflows/` runs a data-validation check on every push (every card has
+a cost and an image; reports any card with unknown text). It does **not** deploy
+unless you trigger it by hand and have set `CLOUDFLARE_API_TOKEN` /
+`CLOUDFLARE_ACCOUNT_ID` — because if Cloudflare's Git integration is connected,
+it is already deploying and two paths racing on one project is worse than one.
 
 **GitHub Pages** works too: *Settings → Pages → Source: main, folder `/`*.
 
@@ -133,13 +135,11 @@ the clean English scans and compared to the table: **119/119 correct, zero
 errors**. Dorry (`OP17-085`), which originally had no scan at all and whose
 5c/5000/+1000 was inferred purely from the guide's note, came out right.
 
-**What's still missing:** six cards have no effect text, because their spoiler
-photos are too blurred to read at any zoom (`OP17-070`, `OP17-100`) or they are
-genuinely vanilla with an empty text box (`OP17-006`, `OP17-035`, `OP17-051`,
-`OP17-088`). All six are rated 3.0–3.5, and none of them is a blocker, so the
-blocker floor is unaffected. Everything is in `data/op17_stats.tsv` (stats) and
-`data/op17_text.json` (text) — fix anything and re-run
-`python3 scripts/build_op17.py`.
+**Nothing is missing.** Every card resolves: 7 are confirmed to have no rules
+text at all (flagged `vanilla: true` so the gap report can tell "this card is
+blank" from "we couldn't read it"), and every other card has its text. Stats
+live in `data/op17_stats.tsv`, text in `data/op17_text.json` — edit either and
+re-run `python3 scripts/build_op17.py`.
 
 ### When Bandai publishes OP17
 
