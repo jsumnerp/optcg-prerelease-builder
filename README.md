@@ -5,10 +5,47 @@ deck out of what it opened. One button, repeatable by seed, plus a batch mode
 that runs many pools and reports how often the deck hits its targets.
 
 ```bash
-./run.sh
+./run.sh          # → http://localhost:8777/
 ```
 
-Then open <http://localhost:8777/web/>.
+It's a **PWA**: installable to your phone's home screen and fully usable
+offline, which is the point — venue wifi at a prerelease is not a plan.
+
+## Deploying
+
+The app is a static site at the repo root, so it needs no build step.
+
+**Cloudflare Pages (recommended — auto-deploys on every push):**
+dashboard → *Workers & Pages* → *Create* → *Pages* → *Connect to Git* → pick
+this repo, then:
+
+| setting | value |
+|---|---|
+| Framework preset | None |
+| Build command | *(leave empty)* |
+| Build output directory | `/` |
+
+That's it — every push to `main` redeploys. `_headers` is already in the repo
+and tells Cloudflare to revalidate `sw.js`, `config.js` and `data/*` while
+caching card art immutably, so a deploy can't pin you to a stale build.
+
+There's also `.github/workflows/deploy-cloudflare.yml` if you'd rather deploy
+from Actions (needs `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` secrets).
+The Git integration above needs no secrets, so prefer it.
+
+**GitHub Pages** works too: *Settings → Pages → Source: main, folder `/`*.
+
+### Installing on your phone
+
+Service workers require a **secure origin**. Over `https` (Cloudflare/GitHub
+Pages) install works normally — open the site, *Share → Add to Home Screen* on
+iOS, or the install prompt on Android. Over plain `http` on a LAN address the
+registration is silently skipped: the app still runs, it just can't be
+installed or used offline. `localhost` counts as secure, so local dev is fine.
+
+Once installed, the shell, both data files and all 129 card thumbnails
+(~1.4 MB) are precached, so a cold offline launch is fully functional. The
+larger 420px card art is cached as you browse it.
 
 ---
 
@@ -44,7 +81,7 @@ all — and the guide's ratings were written for this format anyway, so the
 riders being live is already priced into them.
 
 Leaders you open in packs are unusable and are shown as such. Set
-`format.fixedLeader` to `null` in `web/config.js` to go back to evaluating all
+`format.fixedLeader` to `null` in `config.js` to go back to evaluating all
 six set Leaders (useful for constructed-style what-ifs).
 
 ## Where the card data came from
@@ -98,7 +135,7 @@ that dataset has since been deleted since only OP17 is wanted here.
 
 ## The pack model
 
-Bandai does not publish per-pack odds. The defaults in `web/config.js` reproduce
+Bandai does not publish per-pack odds. The defaults in `config.js` reproduce
 the per-box counts the community has measured for a 24-pack box (2 Leaders,
 6 SR, ~0.5 SEC) and put Rares in the rest of the hit slot:
 
@@ -135,30 +172,44 @@ card pays no brick tax at all; a 3.5 or below pays in full. So Jozu at 6 cost
 keeps his slot and a mediocre 7-drop doesn't.
 
 **Deck-level constraints** (all in `config.js`, all soft with a score cost):
-**10–14 cards with a 2000 counter**, **≥5 blockers**, at most 12 counterless
+**14+ cards with a 2000 counter**, **≥5 blockers**, at most 12 counterless
 cards, at most 5 uncastable counter-fodder cards, per-cost curve **ceilings**,
 ≤9 events/stages, ≥27 characters.
 
-### A band needs a reward, not just a floor
+### What counts as a 2000 counter
 
-Penalising below 10 and above 14 is *not* a band — it's a floor, and the solver
-banks the minimum and spends every remaining slot on card quality. 109 of 120
-pools came out at exactly 10.
+A printed 2000 on the card, plus one narrow case: a **0-cost Counter event with
+no extra cost**. `[Counter] ... gains +2000 power` on a free event is a drop-in
+substitute for a printed counter. Everything else is excluded, deliberately:
 
-`counterBonusInBand` pays 0.9 per 2k counter between the floor and the ceiling.
-That number is the measured price of a marginal counter (rating/card fell 0.039
-across 1.71 counters when the old target moved 10 → 12, ≈0.9 score each), so
-counters are valued at par: the deck takes extras when the pool offers them
-cheaply and stops when they would cost real cards.
+- a **1-cost** counter event still costs a turn's DON!!
+- a **pitch** counter (`[Counter] You may trash 1 card: ...`) costs *two* cards,
+  the event plus the pitch — it is not a 2000 counter
 
-| bonus | 10 | 11 | 12 | 13 | 14 | mean |
-|---|---|---|---|---|---|---|
-| 0 | 109 | 4 | 2 | 0 | 0 | 9.99 |
-| **0.9** | **44** | 18 | 17 | 10 | 26 | **11.47** |
-| 2.0 | 3 | 10 | 13 | 13 | 76 | 13.08 |
+In OP17 that means exactly two cards qualify beyond the printed ones:
+`OP17-055` and `OP17-056`, both 0-cost Rocks Pirates events at +2000. The
+solver reads the value out of the card text (`free_counter_value`), so nothing
+is hand-maintained. 24 cards in the set clear the bar; a 6-pack pool opens
+~17.6 copies.
 
-Overpaying just moves the pile-up to the ceiling, which is the same bug at the
-other end.
+### A floor, not a band
+
+The target is a **soft floor at 14 with no ceiling**. Soft matters: each
+missing counter costs `counterFloorWeight`, so the solver stops short when the
+last counters would cost real cards.
+
+Sweeping that weight over 120 pools:
+
+| floor weight | mean 2k | reaches 14 | rating/card | blockers |
+|---|---|---|---|---|
+| 0.9 | 11.65 | 28% | 3.952 | 6.3 |
+| 1.5 | 13.01 | 58% | 3.925 | 6.2 |
+| **2.5** | **13.55** | **83%** | **3.910** | 6.0 |
+| 4.0 | 13.59 | 83% | 3.908 | 6.0 |
+
+2.5 and 4.0 are identical, which is the evidence that 2.5 isn't force-marching:
+the pools that fall short do so because they contain no more counters, not
+because the push is too weak. Total cost of the whole climb: 0.042 rating/card.
 
 Those first two are the deliberate ones. A 6-pack pool opens ~16 copies of
 2000-counter cards, so the counter target is never a scarcity problem — it's a
@@ -208,7 +259,7 @@ Honest accounting for the whole change, 120 pools:
 
 | | before exemption | after |
 |---|---|---|
-| in the 10–14 band | 91% | **96%** |
+| reaching the counter target | 91% | **96%** |
 | all targets met | 63% | **78%** |
 | rating per card | 3.919 | **3.945** |
 | dead turns | **7.8%** | 8.9% |
@@ -262,9 +313,9 @@ cards with no Leader.
 I verified the button exists and is labelled "Import SIM"; I did not run a
 deck through their parser. If it rejects the file, tell me what it expects.
 - **Batch stats** — run 100 pools (~2 s) and see how the format actually
-  behaves. Current numbers over 100 OP17 pools: **95%** land in the 10–14
-  2k-counter band (mean **11.5**, genuinely spread across it), **96%** reach 5+
-  blockers, **80%** meet every structural target, mean avg cost 3.75. The ones that miss are genuine pool problems, not
+  behaves. Current numbers over 100 OP17 pools: **82%** reach 14+ 2k counters
+  (mean **13.5**), **95%** reach 5+ blockers, **63%** meet every structural
+  target, mean avg cost 3.77. The ones that miss are genuine pool problems, not
   solver failures — that's what the flags under the curve are for.
 - **Quick add** — the one to use at the event, on a phone. The whole set as a
   tappable image grid: tap the art to add one, the **1–5** buttons set a count
@@ -281,10 +332,13 @@ scripts/scrape_bandai.py   official Bandai scraper (any set) + image download
 scripts/import_ratings.py  xlsx -> ratings JSON (stdlib only, no openpyxl)
 scripts/build_op17.py      fuse stats + text + ratings, with the cost cross-check
 data/op17_stats.tsv        hand-entered stats — edit here to fix a misread
-web/config.js              every tunable number: format, pack odds, weights
-web/solver.js              scoring + annealing
-web/packs.js               pack simulation
-web/app.js                 UI
+config.js              every tunable number: format, pack odds, weights
+solver.js                  scoring + annealing
+packs.js                   pack simulation
+app.js                     UI
+sw.js                      offline precache (shell + thumbnails)
+manifest.webmanifest       PWA metadata
+_headers                   Cloudflare Pages cache rules
 ```
 
 ## What it can't do

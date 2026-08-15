@@ -1,0 +1,31 @@
+# Cloudflare Pages header rules. (GitHub Pages ignores this file; it's harmless
+# there.) The service worker handles offline caching, so the CDN must not get in
+# its way -- a long-cached sw.js or card file would pin the app to a stale build.
+
+/sw.js
+  Cache-Control: no-cache, must-revalidate
+
+/config.js
+  Cache-Control: no-cache, must-revalidate
+
+/index.html
+  Cache-Control: no-cache, must-revalidate
+
+/manifest.webmanifest
+  Cache-Control: no-cache, must-revalidate
+  Content-Type: application/manifest+json
+
+# Card data changes whenever the set data is rebuilt; revalidate rather than
+# serve a deck built from stale stats.
+/data/*
+  Cache-Control: no-cache, must-revalidate
+
+# Art is content-addressed by card id and never changes in place.
+/img/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/thumb/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/icons/*
+  Cache-Control: public, max-age=604800
