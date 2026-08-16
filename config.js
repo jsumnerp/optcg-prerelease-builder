@@ -5,8 +5,7 @@
 window.CFG = {
   // ---- Sealed format ------------------------------------------------------
   format: {
-    packs: 6,          // Bandai's suggested prerelease kit
-    cardsPerPack: 12,
+    poolSize: 72,      // 6 packs x 12 -- only used for the "of 72" hint
     deckSize: 40,      // prerelease deck is Leader + 40 (constructed is 50)
     copyLimit: Infinity, // prerelease lifts the 4-copy rule
     rainbow: true,     // no colour restriction from your Leader
@@ -43,21 +42,6 @@ window.CFG = {
       image: 'img/P-RAINBOW-LUFFY.jpg',
     },
     bringOwnLeader: false, // ignored while fixedLeader is set
-  },
-
-  // ---- Pack model ---------------------------------------------------------
-  // Bandai does NOT publish per-pack odds. These defaults reproduce the
-  // community-reported per-box counts for a 24-pack box: 2 Leaders, 6 SR,
-  // ~0.5 SEC. Rares fill the rest of the hit slot. Change freely.
-  pack: {
-    slots: { C: 7, UC: 4 },   // 11 base cards...
-    hitSlot: {                // ...plus 1 hit, drawn from this distribution
-      R:   0.642,
-      SR:  0.250,   // 6 per 24-pack box
-      L:   0.083,   // 2 per box
-      SEC: 0.021,   // ~0.5 per box
-      SP:  0.004,   // ~1 per 12-box case
-    },
   },
 
   // ---- What a good sealed deck looks like ---------------------------------

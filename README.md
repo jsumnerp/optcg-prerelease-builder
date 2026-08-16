@@ -1,8 +1,8 @@
 # OPTCG Sealed Deck Solver — OP17
 
-Simulates an OP-17 prerelease: opens 6 packs, then builds the best legal 40-card
-deck out of what it opened. One button, repeatable by seed, plus a batch mode
-that runs many pools and reports how often the deck hits its targets.
+Enter the OP-17 sealed pool you actually opened, and it builds the best legal
+40-card deck out of it — plus the cut pile, with a reason for every card left
+out. Three screens: **Add cards → Deck → Cuts**.
 
 ```bash
 ./run.sh          # → http://localhost:8777/
@@ -68,7 +68,7 @@ Bandai's prerelease rules, not constructed:
 
 | | |
 |---|---|
-| Pool | 6 booster packs, 12 cards each = 72 cards |
+| Pool | 6 booster packs, 12 cards each = 72 cards (you enter what you opened) |
 | Deck | Leader + **40** (constructed is 50) |
 | Colour | **Rainbow** — no colour restriction |
 | Copies | **No 4-copy limit** — play as many duplicates as you opened |
@@ -106,9 +106,8 @@ ranking information, so the solver applies **no** Leader-synergy adjustment at
 all — and the guide's ratings were written for this format anyway, so the
 riders being live is already priced into them.
 
-Leaders you open in packs are unusable and are shown as such. Set
-`format.fixedLeader` to `null` in `config.js` to go back to evaluating all
-six set Leaders (useful for constructed-style what-ifs).
+Set `format.fixedLeader` to `null` in `config.js` to go back to evaluating all
+six set Leaders instead (useful for constructed-style what-ifs).
 
 ## Where the card data came from
 
@@ -165,25 +164,9 @@ shape. Nothing else changes. The scraper was developed and tested against OP16,
 which it parsed cleanly end to end (119 cards + images), so the path works —
 that dataset has since been deleted since only OP17 is wanted here.
 
-## The pack model
-
-Bandai does not publish per-pack odds. The defaults in `config.js` reproduce
-the per-box counts the community has measured for a 24-pack box (2 Leaders,
-6 SR, ~0.5 SEC) and put Rares in the rest of the hit slot:
-
-```js
-pack: {
-  slots:   { C: 7, UC: 4 },            // 11 base cards
-  hitSlot: { R: .642, SR: .25, L: .083, SEC: .021, SP: .004 },
-}
-```
-
-These are an estimate, not a published table. Edit them freely — the whole file
-is read live on each build.
-
 ## How the solver works
 
-Pick 40 cards from ~45 distinct pool entries to maximise total score. The
+Pick 40 cards from your pool to maximise total score. The
 objective is **not** linear — a card's value depends on what else made the deck
 — so it's simulated annealing over swap moves rather than an LP.
 
@@ -332,16 +315,22 @@ density) incrementally and only re-walks the cards that carry riders. A build is
 scorer is kept alongside the fast path, and `Solver.selfCheck()` asserts the two
 agree on random decks after every build.
 
-## Tabs
+## The three screens
 
+- **Add cards** — the whole set as a tappable grid. Tap art to add one, the
+  **1–5** buttons set a count outright, the box in the middle of the card takes
+  **any number** (for the rare pool that hands you seven of something), **×**
+  clears. Search by name or code, filter by colour, running total pinned to the
+  bottom. There's a fold-out box for pasting a list of codes, which merges into
+  the grid rather than replacing it.
 - **Deck** — the 40, grouped by cost, with the curve, the stat chips and every
   unmet target listed explicitly. Red outline = the solver is paying a brick tax
   on that card.
-- **Pool** — all 72 cards opened, with duplicate counts.
 - **Cuts** — everything left out, ranked by *margin*: the score change from
   swapping it in for the deck's weakest card. Anything near zero is a coin flip
-  you should feel free to overrule. Exports too, so you can load your leftovers
-  in as a sideboard and try swaps yourself.
+  you should feel free to overrule.
+
+Both Deck and Cuts export.
 
 ### Exporting to Card Kaizoku
 
@@ -383,7 +372,6 @@ scripts/build_op17.py      fuse stats + text + ratings, with the cost cross-chec
 data/op17_stats.tsv        hand-entered stats — edit here to fix a misread
 config.js              every tunable number: format, pack odds, weights
 solver.js                  scoring + annealing
-packs.js                   pack simulation
 app.js                     UI
 sw.js                      offline precache (shell + thumbnails)
 manifest.webmanifest       PWA metadata

@@ -1,4 +1,4 @@
-// UI glue: load a set, open packs, run the solver, render the result.
+// UI glue: enter a pool, run the solver, render the deck and the cut pile.
 
 (function () {
   'use strict';
@@ -247,7 +247,7 @@
 
   function downloadSim(key) {
     const E = EXPORTS[key];
-    const name = `${state.set}-sealed-${$('#seed').value || 'pool'}-${E.suffix}.txt`;
+    const name = `${state.set}-${E.suffix}.txt`;
     const blob = new Blob([$(E.text).value], { type: 'text/plain' });
     const a = document.createElement('a');
     a.href = URL.createObjectURL(blob);
@@ -272,29 +272,6 @@
     let n = 0, sum = 0;
     for (const d of deck) { n += d.count; sum += (d.card.cost || 0) * d.count; }
     return n ? sum / n : 0;
-  }
-
-  function renderPool(pool, packs) {
-    const body = el('div');
-    const n = pool.reduce((a, e) => a + e.count, 0);
-    const h = el('div', 'chips');
-    h.appendChild(chip('cards opened', n));
-    h.appendChild(chip('distinct', pool.length));
-    h.appendChild(chip('packs', packs ? packs.length : '—'));
-    const rar = {};
-    for (const e of pool) rar[e.card.rarity] = (rar[e.card.rarity] || 0) + e.count;
-    for (const r of ['L', 'SEC', 'SR', 'R', 'UC', 'C']) if (rar[r]) h.appendChild(chip(r, rar[r]));
-    body.appendChild(h);
-
-    const grid = el('div', 'grid');
-    for (const e of pool) {
-      grid.appendChild(cardTile(e.card, e.count, {
-        value: window.Solver.baseRating(e.card, state.ratings).value,
-      }));
-    }
-    body.appendChild(grid);
-    $('#poolBody').className = '';
-    $('#poolBody').replaceChildren(body);
   }
 
   function renderCuts(sol) {
@@ -396,156 +373,6 @@
     return String(s).replace(/[&<>"]/g, (ch) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[ch]));
   }
 
-  // -------------------------------------------------------------- actions ---
-
-  function runSim() {
-    const packs = +$('#packCount').value || 6;
-    const seed = +$('#seed').value || 1;
-    window.CFG.format.packs = packs;
-
-    const t0 = performance.now();
-    const opened = window.Packs.openPacks(state.cards, packs, seed);
-    state.pool = opened.pool;
-
-    const leaders = window.Packs.leaderCandidates(state.cards, opened.pool);
-    const sol = window.Solver.buildDeck(opened.pool, leaders, state.ratings, seed);
-    const ms = Math.round(performance.now() - t0);
-
-    if (!sol) { setStatus('Pool too small to build a 40-card deck.', 'warn'); return; }
-    state.solution = sol;
-
-    // The optimiser's inner loop and the reporting path are two implementations
-    // of one objective; make sure they still agree.
-    const drift = window.Solver.selfCheck(opened.pool, leaders[0], state.ratings, 25);
-    if (drift > 1e-6) console.warn(`solver fast/slow path disagree by ${drift}`);
-
-    renderDeck(sol);
-    renderPool(opened.pool, opened.packs);
-    renderCuts(sol);
-
-    const fixed = window.CFG.format.fixedLeader;
-    const pulledLeaders = opened.pool.filter((e) => e.card.category === 'LEADER');
-    setStatus(
-      `Seed ${seed} · ${packs} packs · ${opened.raw.length} cards · ` +
-      (fixed
-        ? `Leader fixed: ${fixed.name}` +
-          (pulledLeaders.length
-            ? ` (${pulledLeaders.length} set Leader${pulledLeaders.length > 1 ? 's' : ''} opened, unusable)`
-            : '')
-        : `${pulledLeaders.length ? 'pulled ' + pulledLeaders.map((e) => e.card.name).join(', ') : 'no Leader pulled'} ` +
-          `(bring-your-own is ${window.CFG.format.bringOwnLeader ? 'on' : 'off'})`) +
-      ` · solved in ${ms}ms`
-    );
-    showTab('deck');
-  }
-
-  function runBatch(n) {
-    const packs = +$('#packCount').value || 6;
-    const start = +$('#seed').value || 1;
-    const btn = $('#btnBatch');
-    btn.disabled = true;
-    setStatus(`Running ${n} sims…`);
-
-    // Yield once so the status paints before we block the thread.
-    setTimeout(() => {
-      const D = window.CFG.deck;
-      const rows = [];
-      const t0 = performance.now();
-      for (let i = 0; i < n; i++) {
-        const seed = start + i;
-        const opened = window.Packs.openPacks(state.cards, packs, seed);
-        const leaders = window.Packs.leaderCandidates(state.cards, opened.pool);
-        const sol = window.Solver.buildDeck(opened.pool, leaders, state.ratings, seed);
-        if (!sol) continue;
-        const s = sol.result.stats;
-        rows.push({
-          seed,
-          score: sol.result.score,
-          n2k: s.n2k,
-          nCounters: s.nCounters,
-          nBlockers: s.nBlockers,
-          leader: sol.leader.name,
-          clean: sol.result.penalties.length === 0,
-          curveOff: sol.result.penalties.filter((p) => p.startsWith('curve')).length,
-          brickTax: sol.result.conditional,
-          avgCost: avgCost(sol.deck),
-        });
-      }
-      renderBatch(rows, Math.round(performance.now() - t0));
-      btn.disabled = false;
-      showTab('batch');
-    }, 20);
-  }
-
-  function renderBatch(rows, ms) {
-    const D = window.CFG.deck;
-    const body = el('div');
-    if (!rows.length) { body.appendChild(el('div', 'empty', 'No sims completed.')); $('#batchBody').replaceChildren(body); return; }
-
-    const mean = (f) => rows.reduce((a, r) => a + f(r), 0) / rows.length;
-    const pct = (f) => (100 * rows.filter(f).length / rows.length).toFixed(0) + '%';
-
-    const chips = el('div', 'chips');
-    chips.appendChild(chip('sims', rows.length));
-    chips.appendChild(chip(`${D.target2kCounters}+ 2k counters`,
-      pct((r) => r.n2k >= D.target2kCounters && (!D.max2kCounters || r.n2k <= D.max2kCounters)),
-      rows.filter((r) => r.n2k >= D.target2kCounters).length / rows.length > 0.6 ? 'ok' : 'warn'));
-    chips.appendChild(chip(`${D.minBlockers}+ blockers`, pct((r) => r.nBlockers >= D.minBlockers)));
-    chips.appendChild(chip('all targets met', pct((r) => r.clean)));
-    chips.appendChild(chip('mean 2k counters', mean((r) => r.n2k).toFixed(1)));
-    chips.appendChild(chip('mean counter cards', mean((r) => r.nCounters).toFixed(1)));
-    chips.appendChild(chip('mean blockers', mean((r) => r.nBlockers).toFixed(1)));
-    chips.appendChild(chip('mean avg cost', mean((r) => r.avgCost).toFixed(2)));
-    chips.appendChild(chip('mean brick tax', mean((r) => r.brickTax).toFixed(2)));
-    chips.appendChild(chip('elapsed', ms + 'ms'));
-    body.appendChild(chips);
-
-    // Distribution of 2k counters -- the number the whole aim hangs on.
-    const dist = {};
-    for (const r of rows) dist[r.n2k] = (dist[r.n2k] || 0) + 1;
-    const keys = Object.keys(dist).map(Number).sort((a, b) => a - b);
-    const maxN = Math.max(...Object.values(dist));
-    const hist = el('div', 'curve');
-    for (const k of keys) {
-      const col = el('div', 'col');
-      col.appendChild(el('div', 'n', String(dist[k])));
-      const bar = el('div', 'bar-in' + (k < D.target2kCounters ? ' out' : ''));
-      bar.style.height = `${Math.max(2, (dist[k] / maxN) * 78)}px`;
-      col.appendChild(bar);
-      col.appendChild(el('div', 'lbl', String(k)));
-      col.appendChild(el('div', 'band', '2k'));
-      hist.appendChild(col);
-    }
-    body.appendChild(el('h2', null, 'Distribution of 2000-counter cards per solved deck'));
-    body.appendChild(hist);
-
-    // With the kit's fixed Leader there is nothing to tally.
-    if (window.CFG.format.fixedLeader) {
-      $('#batchBody').className = '';
-      $('#batchBody').replaceChildren(body);
-      setStatus(`${rows.length} sims in ${ms}ms.`);
-      return;
-    }
-
-    const leaderTally = {};
-    for (const r of rows) leaderTally[r.leader] = (leaderTally[r.leader] || 0) + 1;
-    const t = el('table');
-    t.innerHTML = '<thead><tr><th>Leader chosen</th><th class="num">Decks</th><th class="num">Share</th></tr></thead>';
-    const tb = el('tbody');
-    for (const [name, count] of Object.entries(leaderTally).sort((a, b) => b[1] - a[1])) {
-      const tr = el('tr');
-      tr.innerHTML = `<td>${escapeHtml(name)}</td><td class="num">${count}</td><td class="num">${(100 * count / rows.length).toFixed(0)}%</td>`;
-      tb.appendChild(tr);
-    }
-    t.appendChild(tb);
-    body.appendChild(el('h2', null, 'Which Leader the solver picked'));
-    body.appendChild(t);
-
-    $('#batchBody').className = '';
-    $('#batchBody').replaceChildren(body);
-    setStatus(`${rows.length} sims in ${ms}ms.`);
-  }
-
   // --------------------------------------------------------- paste input ---
 
   function parsePaste(text) {
@@ -577,23 +404,19 @@
     const { pool, unknown } = parsePaste($('#pasteBox').value);
     const n = pool.reduce((a, e) => a + e.count, 0);
     const msg = $('#pasteMsg');
-    if (n < window.CFG.format.deckSize) {
-      msg.textContent = `Only ${n} cards parsed — need at least ${window.CFG.format.deckSize}.` +
+    if (!n) {
+      msg.textContent = 'Nothing recognised.' +
         (unknown.length ? ` Unrecognised: ${unknown.slice(0, 5).join(', ')}` : '');
       return;
     }
-    msg.textContent = `${n} cards, ${pool.length} distinct.` +
-      (unknown.length ? ` Skipped ${unknown.length} unrecognised line(s): ${unknown.slice(0, 5).join(', ')}` : '');
-
-    const leaders = window.Packs.leaderCandidates(state.cards, pool);
-    const sol = window.Solver.buildDeck(pool, leaders, state.ratings, +$('#seed').value || 1);
-    if (!sol) { msg.textContent += ' — solver could not build a legal deck.'; return; }
-    state.pool = pool;
-    state.solution = sol;
-    renderDeck(sol);
-    renderPool(pool, null);
-    renderCuts(sol);
-    showTab('deck');
+    // Merge into whatever is already in the grid rather than replacing it, so
+    // you can paste a list and then keep tapping.
+    for (const e of pool) {
+      quick.counts.set(e.card.id, (quick.counts.get(e.card.id) || 0) + e.count);
+    }
+    renderQuickGrid();
+    msg.textContent = `Loaded ${n} cards (${pool.length} distinct).` +
+      (unknown.length ? ` Skipped ${unknown.length} unrecognised: ${unknown.slice(0, 4).join(', ')}` : '');
   }
 
   // ------------------------------------------------------------ quick add ---
@@ -642,6 +465,31 @@
       btn.addEventListener('click', () => setQuick(c.id, (quick.counts.get(c.id) || 0) + 1));
       card.appendChild(btn);
 
+      // Free-form count over the middle of the art. The 1-5 row covers the
+      // normal cases; this is for the rare pool that hands you six of something.
+      const qty = document.createElement('input');
+      qty.type = 'number';
+      qty.className = 'qa-qty';
+      qty.min = '0';
+      qty.inputMode = 'numeric';
+      qty.setAttribute('aria-label', `Copies of ${c.id}`);
+      qty.addEventListener('click', (e) => e.stopPropagation());
+      qty.addEventListener('input', () => {
+        const n = Math.max(0, parseInt(qty.value, 10) || 0);
+        // Don't repaint this tile mid-type; it would fight the caret.
+        if (n <= 0) quick.counts.delete(c.id); else quick.counts.set(c.id, n);
+        const t = quick.tiles.get(c.id);
+        if (t) {
+          t.card.classList.toggle('picked', n > 0);
+          t.badge.textContent = n ? '\u00d7' + n : '';
+          t.badge.style.display = n ? '' : 'none';
+          t.numBtns.forEach((b, i) => b.classList.toggle('on', n === i + 1));
+          qty.classList.toggle('has', n > 0);
+        }
+        updateQuickCount();
+      });
+      btn.appendChild(qty);
+
       const code = el('div', 'qa-code');
       code.innerHTML = `<b>${escapeHtml(c.id.replace(/^OP17-/, ''))}</b> ${escapeHtml(c.name).slice(0, 18)}`;
       card.appendChild(code);
@@ -661,7 +509,7 @@
       nums.appendChild(clr);
       card.appendChild(nums);
 
-      quick.tiles.set(c.id, { card, badge, numBtns });
+      quick.tiles.set(c.id, { card, badge, numBtns, qty });
       paintQuickTile(c.id);
       frag.appendChild(card);
     }
@@ -679,6 +527,10 @@
     t.badge.textContent = n ? '×' + n : '';
     t.badge.style.display = n ? '' : 'none';
     t.numBtns.forEach((b, i) => b.classList.toggle('on', n === i + 1));
+    if (t.qty) {
+      t.qty.classList.toggle('has', n > 0);
+      if (document.activeElement !== t.qty) t.qty.value = n || '';
+    }
   }
 
   function setQuick(id, n) {
@@ -691,11 +543,19 @@
     let total = 0;
     for (const n of quick.counts.values()) total += n;
     const need = window.CFG.format.deckSize;
-    const target = window.CFG.format.packs * window.CFG.format.cardsPerPack;
+    const target = window.CFG.format.poolSize;
     $('#qaCount').textContent =
       `${total} cards · ${quick.counts.size} distinct` +
       (total < need ? ` · need ${need - total} more to build` : ` · of ${target} expected`);
     $('#qaBuild').disabled = total < need;
+  }
+
+  // The kit supplies one Leader and everyone uses it. Clearing `fixedLeader`
+  // falls back to every Leader in the set.
+  function leaderCandidates() {
+    const fixed = window.CFG.format.fixedLeader;
+    if (fixed) return [fixed];
+    return state.cards.filter((c) => c.category === 'LEADER' && !c.parallel);
   }
 
   function buildFromQuick() {
@@ -705,16 +565,15 @@
       .filter((e) => e.card)
       .sort((a, b) => (a.card.cost ?? 99) - (b.card.cost ?? 99));
 
-    const sol = window.Solver.buildDeck(
-      pool, window.Packs.leaderCandidates(state.cards, pool), state.ratings, 1);
+    // Fixed RNG seed: the same pool must always produce the same deck.
+    const sol = window.Solver.buildDeck(pool, leaderCandidates(), state.ratings, 1);
     if (!sol) { setStatus('Could not build a legal deck from that pool.', 'warn'); return; }
     state.pool = pool;
     state.solution = sol;
     renderDeck(sol);
-    renderPool(pool, null);
     renderCuts(sol);
     const n = pool.reduce((a, e) => a + e.count, 0);
-    setStatus(`Hand-entered pool · ${n} cards · Leader ${sol.leader.name}`);
+    setStatus(`${n}-card pool · Leader ${sol.leader.name}`);
     showTab('deck');
   }
 
@@ -727,34 +586,11 @@
 
   // ----------------------------------------------------------------- init ---
 
-  async function discoverSets() {
-    const sel = $('#setSelect');
-    // Add a set code here once its data/cards_<CODE>.json exists.
-    const candidates = ['OP17'];
-    const found = [];
-    for (const c of candidates) {
-      try {
-        const r = await fetch(`data/cards_${c}.json`, { method: 'HEAD', cache: 'no-store' });
-        if (r.ok) found.push(c);
-      } catch (_) { /* not present */ }
-    }
-    for (const c of found) sel.appendChild(new Option(c, c));
-    // A one-set picker is just clutter.
-    sel.closest('label').hidden = found.length < 2;
-    return found;
-  }
-
   async function init() {
     document.querySelectorAll('.tabs button').forEach((b) =>
       b.addEventListener('click', () => showTab(b.dataset.tab)));
 
-    $('#btnSim').addEventListener('click', runSim);
-    $('#btnBatch').addEventListener('click', () => runBatch(100));
     $('#btnPaste').addEventListener('click', runPaste);
-    $('#btnReroll').addEventListener('click', () => {
-      $('#seed').value = Math.floor(Math.random() * 1e6);
-      runSim();
-    });
     wireExport('deck');
     wireExport('cuts');
 
@@ -762,21 +598,7 @@
     $('#qaClear').addEventListener('click', () => { quick.counts.clear(); renderQuickGrid(); });
     $('#qaBuild').addEventListener('click', buildFromQuick);
 
-    $('#setSelect').addEventListener('change', async (e) => {
-      await loadSet(e.target.value);
-      quick.counts.clear();
-      renderQuickColors();
-      renderQuickGrid();
-      $('#deckBody').className = 'empty';
-      $('#deckBody').textContent = 'Set changed — run a new simulation.';
-    });
-
-    const sets = await discoverSets();
-    if (!sets.length) {
-      setStatus('No card data found. Run: python3 scripts/build_op17.py', 'warn');
-      return;
-    }
-    await loadSet(sets[0]);
+    await loadSet('OP17');
     renderQuickColors();
     renderQuickGrid();
   }

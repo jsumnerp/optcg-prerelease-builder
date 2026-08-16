@@ -5,15 +5,15 @@
 // Two tiers:
 //   shell  - code, data and the 150px thumbnails the Quick add grid needs.
 //            Precached on install so a cold offline launch is fully functional.
-//   images - the 420px card art. ~7.5 MB, only used on the Deck/Pool/Cuts
+//   images - the 420px card art. ~9 MB, only shown on the Deck and Cuts
 //            tabs, so it is cached lazily as you view cards.
 
-const VERSION = 'v1';
+const VERSION = 'v2';   // bump to evict an installed app's old precache
 const SHELL = `shell-${VERSION}`;
 const IMAGES = `images-${VERSION}`;
 
 const SHELL_FILES = [
-  '.', 'index.html', 'style.css', 'config.js', 'solver.js', 'packs.js', 'app.js',
+  '.', 'index.html', 'style.css', 'config.js', 'solver.js', 'app.js',
   'manifest.webmanifest',
   'icons/icon-192.png', 'icons/icon-512.png', 'icons/apple-touch-icon.png',
   'data/cards_OP17.json', 'data/ratings_OP17.json',
